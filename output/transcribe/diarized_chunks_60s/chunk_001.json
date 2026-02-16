@@ -1,0 +1,193 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 2.888,
+      "speaker": "A",
+      "start": 1.588,
+      "text": " Do you have any takes on how much we're donating on some too much?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 4.088,
+      "speaker": "A",
+      "start": 2.9379999999999997,
+      "text": " Thank you so much for having me. I'm excited to have a chat.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 4.438,
+      "speaker": "B",
+      "start": 4.088,
+      "text": " Yeah, well,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_3",
+      "end": 6.4879999999999995,
+      "speaker": "B",
+      "start": 4.4879999999999995,
+      "text": " the thing is we're talking to women who've made the switch from one career to another.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_4",
+      "end": 8.138,
+      "speaker": "B",
+      "start": 6.638,
+      "text": " And you know how it works. Can you tell us a little bit about your career journey?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_5",
+      "end": 9.938000000000002,
+      "speaker": "A",
+      "start": 8.288,
+      "text": " I think I've switched careers three or four times already.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_6",
+      "end": 12.738,
+      "speaker": "A",
+      "start": 10.038,
+      "text": " I feel it's happened many, many times in my nearly 43 years on the planet.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_7",
+      "end": 16.638,
+      "speaker": "A",
+      "start": 12.788,
+      "text": " And I think for me, it's been a really exciting journey because it means I've been able to explore each one throughout its entirety.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_8",
+      "end": 19.488,
+      "speaker": "A",
+      "start": 16.788,
+      "text": " And then each segue or the universe has led me to what is next.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_9",
+      "end": 21.638,
+      "speaker": "A",
+      "start": 19.538,
+      "text": " And I think for me, the biggest thing has always been listening to what's out there,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_10",
+      "end": 22.438000000000002,
+      "speaker": "A",
+      "start": 21.688000000000002,
+      "text": " taking advantage of opportunities.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_11",
+      "end": 26.388000000000005,
+      "speaker": "A",
+      "start": 22.538000000000004,
+      "text": " And if something is, I guess, having this little bit of excitement about exploring that particular path, then you've got to go for it.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_12",
+      "end": 28.688000000000006,
+      "speaker": "B",
+      "start": 26.388000000000005,
+      "text": " Well, we're planning with two investment as you're too something. You're too much.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_13",
+      "end": 50.63,
+      "speaker": "B",
+      "start": 28.98,
+      "text": " Can you tell us a little bit about what being too invested looks like? I guess I do everything with a lot of passion with a lot of emotion and if I'm going to explore something if I'm going to have a say about something if I'm going to be conversational or in-depth in anything in my life then I need to be heavily invested I need to make sure that I research I need to know that I know what I'm talking about I know my stuff and ultimately that is what you need to put into this to be out there and public and having a go and having a crack so definitely throughout my life I think too invested is a great way to describe me",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_14",
+      "end": 53.88,
+      "speaker": "B",
+      "start": 50.83,
+      "text": " Well, I'm really keen to jump into helping too invested help you and turn this into your career,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_15",
+      "end": 54.78,
+      "speaker": "B",
+      "start": 53.93000000000001,
+      "text": " but that's not where your career began.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_16",
+      "end": 55.88000000000001,
+      "speaker": "B",
+      "start": 54.88000000000001,
+      "text": " Your actual career began at age.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_17",
+      "end": 56.302,
+      "speaker": "B",
+      "start": 56.052,
+      "text": " And yeah, just a",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_18",
+      "end": 56.402,
+      "speaker": "@",
+      "start": 56.302,
+      "text": " quick,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_19",
+      "end": 58.152,
+      "speaker": "B",
+      "start": 56.402,
+      "text": " I mean, you sound sort of like when you joined the Australian swimming team.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_20",
+      "end": 58.952,
+      "speaker": "B",
+      "start": 58.252,
+      "text": " Was that a childhood dream of yours?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_21",
+      "end": 59.902,
+      "speaker": "B",
+      "start": 59.102000000000004,
+      "text": " Are you actually good at it?",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "Do you have any takes on how much we're donating on some too much? Thank you so much for having me. I'm excited to have a chat. Yeah, well, the thing is we're talking to women who've made the switch from one career to another. And you know how it works. Can you tell us a little bit about your career journey? I think I've switched careers three or four times already. I feel it's happened many, many times in my nearly 43 years on the planet. And I think for me, it's been a really exciting journey because it means I've been able to explore each one throughout its entirety. And then each segue or the universe has led me to what is next. And I think for me, the biggest thing has always been listening to what's out there, taking advantage of opportunities. And if something is, I guess, having this little bit of excitement about exploring that particular path, then you've got to go for it. Well, we're planning with two investment as you're too something. You're too much.\nCan you tell us a little bit about what being too invested looks like? I guess I do everything with a lot of passion with a lot of emotion and if I'm going to explore something if I'm going to have a say about something if I'm going to be conversational or in-depth in anything in my life then I need to be heavily invested I need to make sure that I research I need to know that I know what I'm talking about I know my stuff and ultimately that is what you need to put into this to be out there and public and having a go and having a crack so definitely throughout my life I think too invested is a great way to describe me Well, I'm really keen to jump into helping too invested help you and turn this into your career, but that's not where your career began. Your actual career began at age.\nAnd yeah, just a quick, I mean, you sound sort of like when you joined the Australian swimming team. Was that a childhood dream of yours? Are you actually good at it?",
+  "usage": {
+    "input_tokens": 773,
+    "output_tokens": 2005,
+    "total_tokens": 2778,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 723,
+      "text_tokens": 50
+    }
+  }
+}

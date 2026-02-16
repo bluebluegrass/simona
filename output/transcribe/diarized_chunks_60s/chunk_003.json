@@ -1,0 +1,57 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 25.75,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " start and it was a lucky break is your law and then from then on it was like this is my path this is my journey this is my dreams it's what I want so it's very much birthed from that first page of the 15 year old I mean if you're becoming an elite athlete you want Olympic gold medals silver medals world championships I couldn't imagine it being too invested there's something you need to be when you reach that level you can't be anything other than too invested as an elite athlete it is all in you know I had people saying oh you're so lucky you get to miss school and you get to travel the world and you get to do this that and the other saying the glory side of it and I thought you know what you can get lucky too you just have the alarm before 37 tomorrow morning come training with me and maybe you'll get lucky too and so I had a real thing about that being called lucky because",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 52.022000000000006,
+      "speaker": "A",
+      "start": 25.972,
+      "text": " Because really throughout my career I had a little bit of natural talent but ultimately what got me there was a lot of hard work I had a great work ethic in the pool and it was just about just doing those k's and so it's all like swimming it's not just about every waking moment and every race it's about every training session it's about every sleeping moment it's about what you consume it's fuel for your body it's about how you recover it is literally your whole life revolves around being an elite athlete and in a sport that is won and lost by 100th of a second like the smallest margin there possibly is for every training session that you're not giving 100% for every recovery that you are not moving through and doing it to the best of your ability every time you don't give 100% in your whole life that could impact",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 53.204,
+      "speaker": "A",
+      "start": 52.404,
+      "text": " The result on race day.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_3",
+      "end": 57.504000000000005,
+      "speaker": "A",
+      "start": 53.304,
+      "text": " So it is definitely all in company and I was 100% probably not that stage to invest it, but I was 100% invested",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_4",
+      "end": 59.704,
+      "speaker": "A",
+      "start": 57.554,
+      "text": " It sounds like something that's familiar to those early mornings or late nights",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "start and it was a lucky break is your law and then from then on it was like this is my path this is my journey this is my dreams it's what I want so it's very much birthed from that first page of the 15 year old I mean if you're becoming an elite athlete you want Olympic gold medals silver medals world championships I couldn't imagine it being too invested there's something you need to be when you reach that level you can't be anything other than too invested as an elite athlete it is all in you know I had people saying oh you're so lucky you get to miss school and you get to travel the world and you get to do this that and the other saying the glory side of it and I thought you know what you can get lucky too you just have the alarm before 37 tomorrow morning come training with me and maybe you'll get lucky too and so I had a real thing about that being called lucky because\nBecause really throughout my career I had a little bit of natural talent but ultimately what got me there was a lot of hard work I had a great work ethic in the pool and it was just about just doing those k's and so it's all like swimming it's not just about every waking moment and every race it's about every training session it's about every sleeping moment it's about what you consume it's fuel for your body it's about how you recover it is literally your whole life revolves around being an elite athlete and in a sport that is won and lost by 100th of a second like the smallest margin there possibly is for every training session that you're not giving 100% for every recovery that you are not moving through and doing it to the best of your ability every time you don't give 100 % in your whole life that could impact\nThe result on race day. So it is definitely all in company and I was 100% probably not that stage to invest it, but I was 100% invested It sounds like something that's familiar to those early mornings or late nights",
+  "usage": {
+    "input_tokens": 817,
+    "output_tokens": 1897,
+    "total_tokens": 2714,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 797,
+      "text_tokens": 20
+    }
+  }
+}

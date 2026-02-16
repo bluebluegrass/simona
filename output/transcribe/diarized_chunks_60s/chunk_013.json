@@ -1,0 +1,193 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 1.4000000000000001,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " How it exists is to be happy,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 2.3,
+      "speaker": "A",
+      "start": 1.45,
+      "text": " at peace with our lives,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 2.95,
+      "speaker": "A",
+      "start": 2.4000000000000004,
+      "text": " and to have no regrets.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_3",
+      "end": 16.950000000000003,
+      "speaker": "A",
+      "start": 3.1000000000000005,
+      "text": " So the only way we're ever going to achieve that or have a chance of achieving that is to have a crack at every opportunity that there is, leave no stone unturned, have no regrets by chasing everything that is. If you've got one little inkling of a feeling that you should do something or need to do something or want to do something, you need to explore it because it will only fester on, particularly later in life.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_4",
+      "end": 17.500000000000004,
+      "speaker": "A",
+      "start": 17.000000000000004,
+      "text": " And ultimately,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_5",
+      "end": 21.300000000000004,
+      "speaker": "A",
+      "start": 17.550000000000004,
+      "text": " what's the worst that can happen if it fails and you pivot again or you find a way to use that experience to go on to the next thing?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_6",
+      "end": 23.500000000000007,
+      "speaker": "A",
+      "start": 21.400000000000006,
+      "text": " Because happiness at the end of the day is not worth taking a risk for,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_7",
+      "end": 24.750000000000007,
+      "speaker": "A",
+      "start": 23.60000000000001,
+      "text": " then nothing is in my book.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_8",
+      "end": 25.450000000000006,
+      "speaker": "A",
+      "start": 24.800000000000008,
+      "text": " Where's the good bye?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_9",
+      "end": 27.10000000000001,
+      "speaker": "A",
+      "start": 25.500000000000007,
+      "text": " Giovanni, thank you so much for joining us on the podcast today.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_10",
+      "end": 28.00000000000001,
+      "speaker": "A",
+      "start": 27.15000000000001,
+      "text": " It's been such a pleasure speaking with you.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_11",
+      "end": 29.088,
+      "speaker": "A",
+      "start": 27.988,
+      "text": " Was it all a lie that that didn't do?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_12",
+      "end": 32.138,
+      "speaker": "A",
+      "start": 29.838,
+      "text": " Next time on Too Much, FW's own Jamila Risby,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_13",
+      "end": 35.187999999999995,
+      "speaker": "A",
+      "start": 32.238,
+      "text": " the political advisor who made her way into media and then to champion equality for women.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_14",
+      "end": 38.538,
+      "speaker": "A",
+      "start": 35.338,
+      "text": " I very unexpectedly got diagnosed with a brain tumour on the Monday after they both offered me the job on the Thursday and Friday before.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_15",
+      "end": 40.688,
+      "speaker": "A",
+      "start": 38.688,
+      "text": " I didn't know what life was going to look like in three months, six months and ten years all of a sudden.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_16",
+      "end": 41.738,
+      "speaker": "A",
+      "start": 40.738,
+      "text": " And I didn't know if I'd be alive in that period of time,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_17",
+      "end": 42.088,
+      "speaker": "A",
+      "start": 41.788,
+      "text": " let alone working.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_18",
+      "end": 45.188,
+      "speaker": "A",
+      "start": 43.338,
+      "text": " Too Much is a podcast series proudly supported by Victoria Police,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_19",
+      "end": 46.33800000000001,
+      "speaker": "A",
+      "start": 45.238,
+      "text": " who are looking for more women to join their ranks.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_20",
+      "end": 48.33800000000001,
+      "speaker": "A",
+      "start": 46.438,
+      "text": " Considering making the switch and explore a career with Victoria Police.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_21",
+      "end": 50.23800000000001,
+      "speaker": "A",
+      "start": 48.388000000000005,
+      "text": " There's a link in the show notes or head to police.vic.gov.au.",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "How it exists is to be happy, at peace with our lives, and to have no regrets. So the only way we're ever going to achieve that or have a chance of achieving that is to have a crack at every opportunity that there is, leave no stone unturned, have no regrets by chasing everything that is. If you've got one little inkling of a feeling that you should do something or need to do something or want to do something, you need to explore it because it will only fester on, particularly later in life. And ultimately, what's the worst that can happen if it fails and you pivot again or you find a way to use that experience to go on to the next thing? Because happiness at the end of the day is not worth taking a risk for, then nothing is in my book. Where's the good bye? Giovanni, thank you so much for joining us on the podcast today. It's been such a pleasure speaking with you.\nWas it all a lie that that didn't do? Next time on Too Much, FW's own Jamila Risby, the political advisor who made her way into media and then to champion equality for women. I very unexpectedly got diagnosed with a brain tumour on the Monday after they both offered me the job on the Thursday and Friday before. I didn't know what life was going to look like in three months, six months and ten years all of a sudden. And I didn't know if I'd be alive in that period of time, let alone working. Too Much is a podcast series proudly supported by Victoria Police, who are looking for more women to join their ranks. Considering making the switch and explore a career with Victoria Police. There's a link in the show notes or head to police.vic.gov.au.",
+  "usage": {
+    "input_tokens": 619,
+    "output_tokens": 1734,
+    "total_tokens": 2353,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 607,
+      "text_tokens": 12
+    }
+  }
+}

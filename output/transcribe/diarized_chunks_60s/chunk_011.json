@@ -1,0 +1,233 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 1.5000000000000002,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " Like a Damien's Gardens and Soil Health, I understand.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 3.0,
+      "speaker": "A",
+      "start": 1.7500000000000002,
+      "text": " Farming, I understand. Machinery, I understand.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 3.5,
+      "speaker": "A",
+      "start": 3.05,
+      "text": " How will that work?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_3",
+      "end": 4.6,
+      "speaker": "A",
+      "start": 3.55,
+      "text": " Surely how can a Damien's farming be?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_4",
+      "end": 6.449999999999999,
+      "speaker": "A",
+      "start": 4.6499999999999995,
+      "text": " And once again, like everything in both our lives, it's like a crap.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_5",
+      "end": 7.8500000000000005,
+      "speaker": "A",
+      "start": 6.6,
+      "text": " And we just fell in love with the community.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_6",
+      "end": 13.4,
+      "speaker": "A",
+      "start": 7.95,
+      "text": " And then ultimately the universe said that's the ultimate light bulb moment, if you like, when that farm next door came up for sale and it came with machinery and shared with machinery.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_7",
+      "end": 16.25,
+      "speaker": "A",
+      "start": 13.5,
+      "text": " It was twice the size of our farm. It was a proper macadamia farm in all senses of the word.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_8",
+      "end": 17.6,
+      "speaker": "A",
+      "start": 16.3,
+      "text": " And there wasn't even a fence between the two properties.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_9",
+      "end": 18.6,
+      "speaker": "A",
+      "start": 17.700000000000003,
+      "text": " And we were like, are we doing this?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_10",
+      "end": 19.500000000000004,
+      "speaker": "A",
+      "start": 18.650000000000002,
+      "text": " Are we doing this?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_11",
+      "end": 20.350000000000005,
+      "speaker": "A",
+      "start": 19.550000000000004,
+      "text": " And ultimately,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_12",
+      "end": 21.150000000000006,
+      "speaker": "A",
+      "start": 20.400000000000006,
+      "text": " once again, it was like,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_13",
+      "end": 22.900000000000006,
+      "speaker": "A",
+      "start": 21.200000000000006,
+      "text": " yes, let's do this. We love it down here.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_14",
+      "end": 24.300000000000008,
+      "speaker": "A",
+      "start": 22.950000000000006,
+      "text": " As long as I can have proximity to some kind of airport,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_15",
+      "end": 25.90000000000001,
+      "speaker": "A",
+      "start": 24.40000000000001,
+      "text": " I'm going to have to travel for work no matter where I live. So.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_16",
+      "end": 27.432000000000002,
+      "speaker": "A",
+      "start": 26.132,
+      "text": " So why not go on this journey again?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_17",
+      "end": 31.882,
+      "speaker": "A",
+      "start": 27.482000000000003,
+      "text": " Did you throw yourself into farming with the same zeal and I guess adrenaline that you would have thrown yourself into that pool all those years earlier?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_18",
+      "end": 37.332,
+      "speaker": "A",
+      "start": 32.082,
+      "text": " Yes, but here's the thing. Farming was the first time that the equations that I had been successful in every other aspect of my life didn't work.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_19",
+      "end": 47.082,
+      "speaker": "A",
+      "start": 37.382000000000005,
+      "text": " Because every other component of my career I had been able to find a solution to the problem I had been able to workshop through it, I'd been able to work harder to achieve a goal, I'd been able to educate myself more so that I knew what I was talking about or whatever it was.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_20",
+      "end": 49.782000000000004,
+      "speaker": "A",
+      "start": 47.182,
+      "text": " Farming, it doesn't matter how hard you work, how innovative you are,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_21",
+      "end": 51.08200000000001,
+      "speaker": "A",
+      "start": 49.83200000000001,
+      "text": " how passionate you are, any of that,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_22",
+      "end": 53.882000000000005,
+      "speaker": "A",
+      "start": 51.132000000000005,
+      "text": " because there are so many items that are out of your control, namely Mother Nature,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_23",
+      "end": 54.432,
+      "speaker": "A",
+      "start": 53.932,
+      "text": " first and foremost.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_24",
+      "end": 54.916,
+      "speaker": "A",
+      "start": 54.516,
+      "text": " and B,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_25",
+      "end": 55.666,
+      "speaker": "A",
+      "start": 55.016,
+      "text": " commodity prices,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_26",
+      "end": 59.766,
+      "speaker": "A",
+      "start": 55.716,
+      "text": " things like that, market prices, where you can plan to the best of your ability and a really good farmer will find a way to go.",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "Like a Damien's Gardens and Soil Health, I understand. Farming, I understand. Machinery, I understand. How will that work? Surely how can a Damien's farming be? And once again, like everything in both our lives, it's like a crap. And we just fell in love with the community. And then ultimately the universe said that's the ultimate light bulb moment, if you like, when that farm next door came up for sale and it came with machinery and shared with machinery. It was twice the size of our farm. It was a proper macadamia farm in all senses of the word. And there wasn't even a fence between the two properties. And we were like, are we doing this? Are we doing this? And ultimately, once again, it was like, yes, let's do this. We love it down here. As long as I can have proximity to some kind of airport, I'm going to have to travel for work no matter where I live. So.\nSo why not go on this journey again? Did you throw yourself into farming with the same zeal and I guess adrenaline that you would have thrown yourself into that pool all those years earlier? Yes, but here's the thing. Farming was the first time that the equations that I had been successful in every other aspect of my life didn't work. Because every other component of my career I had been able to find a solution to the problem I had been able to workshop through it, I'd been able to work harder to achieve a goal, I'd been able to educate myself more so that I knew what I was talking about or whatever it was. Farming, it doesn't matter how hard you work, how innovative you are, how passionate you are, any of that, because there are so many items that are out of your control, namely Mother Nature, first and foremost.\nand B, commodity prices, things like that, market prices, where you can plan to the best of your ability and a really good farmer will find a way to go.",
+  "usage": {
+    "input_tokens": 796,
+    "output_tokens": 2120,
+    "total_tokens": 2916,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 772,
+      "text_tokens": 24
+    }
+  }
+}

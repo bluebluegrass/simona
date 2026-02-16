@@ -1,0 +1,41 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 26.3,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " of I've since stated it is paid off the hard work has paid off and the best in the world or I'm you know I've got my dream of a little hanging around my neck all of those things it's an addiction because as much as you enjoy that tiny little moment it's like I want it again I need it again how do I get that again but I recognize that A I was proud of myself B I could not have done anything more to be any better than what I was I couldn't have done anything more I couldn't have trained any harder I couldn't have recovered any better I couldn't have managed injuries any better I couldn't have done anything more to be any better than what I was so that also had a realization attached to it that I had no regrets I was really comfortable with my career and then just a split second later if I'm proud of myself I'm comfortable with my career and I've got no regrets",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 52.638000000000005,
+      "speaker": "A",
+      "start": 26.388,
+      "text": " Then have I also just possibly in this light bulb moment of five minutes in its entirety also lost that one percent of absolute hunger that is required to win at the top level in this sport and be honest a personal component of me went probably yes so that gave me a sense of calm because I was like right well I've made the decision I've got six months until I swim in front of a home crowd in Melbourne at the Commonwealth Games and that will be my final competition and I didn't tell anyone except my family I didn't even tell my coach or my squad mates I wanted it to be business as usual and to go out when I was ready hopefully on a high at my decision and so that transition once I did walk away people like 23 you've got so much more there was still process",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 59.596,
+      "speaker": "A",
+      "start": 52.596,
+      "text": " or process of do I have anything left in the tank is another Olympics what I need to feel comfortable moving on anything like that I just felt really ready by the time I'd realized all of that and realized that I was comfortable and proud",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "of I've since stated it is paid off the hard work has paid off and the best in the world or I'm you know I've got my dream of a little hanging around my neck all of those things it's an addiction because as much as you enjoy that tiny little moment it's like I want it again I need it again how do I get that again but I recognize that A I was proud of myself B I could not have done anything more to be any better than what I was I couldn't have done anything more I couldn't have trained any harder I couldn't have recovered any better I couldn't have managed injuries any better I couldn't have done anything more to be any better than what I was so that also had a realization attached to it that I had no regrets I was really comfortable with my career and then just a split second later if I'm proud of myself I'm comfortable with my career and I've got no regrets\nThen have I also just possibly in this light bulb moment of five minutes in its entirety also lost that one percent of absolute hunger that is required to win at the top level in this sport and be honest a personal component of me went probably yes so that gave me a sense of calm because I was like right well I've made the decision I've got six months until I swim in front of a home crowd in Melbourne at the Commonwealth Games and that will be my final competition and I didn't tell anyone except my family I didn't even tell my coach or my squad mates I wanted it to be business as usual and to go out when I was ready hopefully on a high at my decision and so that transition once I did walk away people like 23 you've got so much more there was still process\nor process of do I have anything left in the tank is another Olympics what I need to feel comfortable moving on anything like that I just felt really ready by the time I'd realized all of that and realized that I was comfortable and proud",
+  "usage": {
+    "input_tokens": 822,
+    "output_tokens": 1906,
+    "total_tokens": 2728,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 800,
+      "text_tokens": 22
+    }
+  }
+}

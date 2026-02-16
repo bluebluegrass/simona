@@ -1,0 +1,137 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 1.7500000000000002,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " How do we get rid of this nasally Queensland bogan accent?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 3.6499999999999995,
+      "speaker": "A",
+      "start": 1.9000000000000001,
+      "text": " So I think being able to laugh at yourself,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 4.199999999999999,
+      "speaker": "A",
+      "start": 3.749999999999999,
+      "text": " once again,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_3",
+      "end": 5.999999999999999,
+      "speaker": "A",
+      "start": 4.299999999999999,
+      "text": " very much being okay with having weaknesses,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_4",
+      "end": 6.999999999999999,
+      "speaker": "A",
+      "start": 6.1499999999999995,
+      "text": " which is something that a couple of like four,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_5",
+      "end": 11.25,
+      "speaker": "A",
+      "start": 7.099999999999999,
+      "text": " something afraid of weaknesses, saying is that as an area for growth really helped me in the world of TV where I was absolutely starting from scratch.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_6",
+      "end": 13.05,
+      "speaker": "B",
+      "start": 11.25,
+      "text": " You've asked a lot about winning and losing as a professional athlete.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_7",
+      "end": 15.350000000000001,
+      "speaker": "B",
+      "start": 13.200000000000001,
+      "text": " If someone who's won many times would have gone through a lot of losses as part of that process,",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_8",
+      "end": 19.05,
+      "speaker": "B",
+      "start": 15.5,
+      "text": " bringing that back to ordinary people's lives, like mine, and people who are thinking of taking on new challenges like changing their career.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_9",
+      "end": 22.3,
+      "speaker": "B",
+      "start": 19.2,
+      "text": " Could you tell us a little bit about a time when you made a switch that didn't quite work out for you and what you learned from that?",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_10",
+      "end": 25.85,
+      "speaker": "A",
+      "start": 22.55,
+      "text": " I had many moments that didn't quite work out as well, and I'd like to preface it by saying I don't regret any of it.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_11",
+      "end": 26.14,
+      "speaker": "A",
+      "start": 25.94,
+      "text": " any of it.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_12",
+      "end": 52.74,
+      "speaker": "B",
+      "start": 26.14,
+      "text": " Well those times where it didn't work once again exploration of having no regrets and saying I tried and it didn't work so therefore it allows me to move on clean from them but probably the hardest one the biggest one for me was I found myself being the web presenter on CPM News Channel 7 in Melbourne and I knew nothing about the weather so not only was I completely underprepared and under skilled for that role I'd also never done auto cue properly or been in front of a green screen properly before I'd also replaced a much loved meteorologist to do this job I was so out of my depth I was for the first time in studio leading my own segment if you like",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_13",
+      "end": 57.112,
+      "speaker": "A",
+      "start": 53.012,
+      "text": " And the only feedback I used to get was, I don't want someone telling me the weather and it's freezing outside.",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_14",
+      "end": 59.912,
+      "speaker": "A",
+      "start": 57.212,
+      "text": " Why doesn't she have a cardigan on or her hair looks terrible that way or she doesn't have enough.",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "How do we get rid of this nasally Queensland bogan accent? So I think being able to laugh at yourself, once again, very much being okay with having weaknesses, which is something that a couple of like four, something afraid of weaknesses, saying is that as an area for growth really helped me in the world of TV where I was absolutely starting from scratch. You've asked a lot about winning and losing as a professional athlete. If someone who's won many times would have gone through a lot of losses as part of that process, bringing that back to ordinary people's lives, like mine, and people who are thinking of taking on new challenges like changing their career. Could you tell us a little bit about a time when you made a switch that didn't quite work out for you and what you learned from that? I had many moments that didn't quite work out as well, and I'd like to preface it by saying I don't regret any of it.\nany of it. Well those times where it didn't work once again exploration of having no regrets and saying I tried and it didn't work so therefore it allows me to move on clean from them but probably the hardest one the biggest one for me was I found myself being the web presenter on CPM News Channel 7 in Melbourne and I knew nothing about the weather so not only was I completely underprepared and under skilled for that role I'd also never done auto cue properly or been in front of a green screen properly before I'd also replaced a much loved meteorologist to do this job I was so out of my depth I was for the first time in studio leading my own segment if you like\nAnd the only feedback I used to get was, I don't want someone telling me the weather and it's freezing outside. Why doesn't she have a cardigan on or her hair looks terrible that way or she doesn't have enough.",
+  "usage": {
+    "input_tokens": 964,
+    "output_tokens": 1974,
+    "total_tokens": 2938,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 914,
+      "text_tokens": 50
+    }
+  }
+}

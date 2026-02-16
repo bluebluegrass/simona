@@ -1,0 +1,41 @@
+{
+  "duration": null,
+  "segments": [
+    {
+      "id": "seg_0",
+      "end": 26.85,
+      "speaker": "A",
+      "start": 0.0,
+      "text": " found a way to work on my weaknesses weaknesses are your greatest area of growth how do I do that you know that makes me faster if I can get better at that something I found quite difficult even though I thought it was an easy transition into something that challenged me in the same ways far to get better at was a foreign concept because I felt like in some ways I'm 5'10 I'm average in the swimming world I'm an Amazon woman in TV land you know much taller and broad shoulders than I had muscles and if I had a male co-host or something like that then you know I definitely had not wear heels or anything like that it was very much the hardest challenge for me was I had gone from recognizing my body was a vehicle it was about what my body could do not what it looked like into a medium it was very much about what do you look like",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_1",
+      "end": 53.8,
+      "speaker": "A",
+      "start": 26.9,
+      "text": " look like you know all those kind of things that it was very much I felt there was this element of like some control and I struggled with that but what I did love was that the biggest thing was is that every day was different no two days were the same I'd gone from absolute Groundhog days in the corporate the monotony because a pool is a pool no matter where you go in the world not like going for a bike ride or a run you can change the scenery and change your motivation a pool is the same parameters no matter where you are in the world so going to something that was so different and exciting and every day was different and there was no routine there was no two days were the same meant that I absolutely loved it and I loved it so I found a way to I always asked for feedback I always asked for people of how I could get better and that was from lovely makeup artists who if I was having a makeup",
+      "type": "transcript.text.segment"
+    },
+    {
+      "id": "seg_2",
+      "end": 59.748,
+      "speaker": "A",
+      "start": 53.748,
+      "text": " When my makeup done, I would come with my makeup done and say tell me how to get better How I do this better if it was you know a sound recordist and I say I had one voice coach once who told",
+      "type": "transcript.text.segment"
+    }
+  ],
+  "task": null,
+  "text": "found a way to work on my weaknesses weaknesses are your greatest area of growth how do I do that you know that makes me faster if I can get better at that something I found quite difficult even though I thought it was an easy transition into something that challenged me in the same ways far to get better at was a foreign concept because I felt like in some ways I'm 5'10 I'm average in the swimming world I'm an Amazon woman in TV land you know much taller and broad shoulders than I had muscles and if I had a male co-host or something like that then you know I definitely had not wear heels or anything like that it was very much the hardest challenge for me was I had gone from recognizing my body was a vehicle it was about what my body could do not what it looked like into a medium it was very much about what do you look like\nlook like you know all those kind of things that it was very much I felt there was this element of like some control and I struggled with that but what I did love was that the biggest thing was is that every day was different no two days were the same I'd gone from absolute Groundhog days in the corporate the monotony because a pool is a pool no matter where you go in the world not like going for a bike ride or a run you can change the scenery and change your motivation a pool is the same parameters no matter where you are in the world so going to something that was so different and exciting and every day was different and there was no routine there was no two days were the same meant that I absolutely loved it and I loved it so I found a way to I always asked for feedback I always asked for people of how I could get better and that was from lovely makeup artists who if I was having a makeup\nWhen my makeup done, I would come with my makeup done and say tell me how to get better How I do this better if it was you know a sound recordist and I say I had one voice coach once who told",
+  "usage": {
+    "input_tokens": 822,
+    "output_tokens": 1944,
+    "total_tokens": 2766,
+    "type": "tokens",
+    "input_token_details": {
+      "audio_tokens": 800,
+      "text_tokens": 22
+    }
+  }
+}
