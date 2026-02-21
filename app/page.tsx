@@ -25,38 +25,7 @@ export default function HomePage() {
       <Hero />
       <LifeInMotion />
 
-      <Section title={podcastsHosted.title} intro={podcastsHosted.intro} kicker="03 / HOSTED PODCASTS">
-        <div className="grid gap-6 md:grid-cols-2">
-          {podcastsHosted.items.map((podcast) => (
-            <Card key={podcast.id} title={podcast.title} description={podcast.description} imageSrc={podcast.coverImage} imageAlt={podcast.title}>
-              <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Editorial Note</p>
-              <div className="mt-2 border-t border-dashed border-neutral-300 pt-3">
-                <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-neutral-600">
-                  {Object.entries(podcast.links).map(([platform, url]) => (
-                    <a
-                      key={platform}
-                      href={isInternalHref(url) ? withBasePath(url) : url}
-                      className="underline underline-offset-4"
-                      target={url.startsWith("http") ? "_blank" : undefined}
-                      rel={url.startsWith("http") ? "noreferrer" : undefined}
-                    >
-                      {platform}
-                    </a>
-                  ))}
-                </div>
-                <a
-                  href={isInternalHref(podcast.latestEpisodeUrl) ? withBasePath(podcast.latestEpisodeUrl) : podcast.latestEpisodeUrl}
-                  className="mt-4 inline-block text-sm underline underline-offset-4"
-                >
-                  {siteData.ui.latestEpisodeLabel}
-                </a>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
-      <Section title={newsletter.title} intro={newsletter.valueProp} kicker="04 / NEWSLETTER">
+      <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
         <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4 rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] p-5">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Join The Journal</p>
@@ -79,19 +48,59 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={book.title} intro={book.why} kicker="05 / BOOK">
-        <Card title={book.bookTitle} description={book.blurb} imageSrc={book.coverImage} imageAlt={book.bookTitle}>
-          <div className="flex flex-wrap gap-4 text-sm">
-            {book.buyLinks.map((link) => (
-              <a key={link.label} href={isInternalHref(link.url) ? withBasePath(link.url) : link.url} className="underline underline-offset-4">
-                {link.label}
-              </a>
+      <Section title="声音与文字" intro={podcastsHosted.intro} kicker="04 / PODCAST & BOOK">
+        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+          <div className="grid gap-6 md:grid-cols-2">
+            {podcastsHosted.items.map((podcast) => (
+              <Card key={podcast.id} title={podcast.title} description={podcast.description} imageSrc={podcast.coverImage} imageAlt={podcast.title}>
+                <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Editorial Note</p>
+                <div className="mt-2 border-t border-dashed border-neutral-300 pt-3">
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-neutral-600">
+                    {Object.entries(podcast.links).map(([platform, url]) => (
+                      <a
+                        key={platform}
+                        href={isInternalHref(url) ? withBasePath(url) : url}
+                        className="underline underline-offset-4"
+                        target={url.startsWith("http") ? "_blank" : undefined}
+                        rel={url.startsWith("http") ? "noreferrer" : undefined}
+                      >
+                        {platform}
+                      </a>
+                    ))}
+                  </div>
+                  <a
+                    href={isInternalHref(podcast.latestEpisodeUrl) ? withBasePath(podcast.latestEpisodeUrl) : podcast.latestEpisodeUrl}
+                    className="mt-4 inline-block text-sm underline underline-offset-4"
+                  >
+                    {siteData.ui.latestEpisodeLabel}
+                  </a>
+                </div>
+              </Card>
             ))}
           </div>
-        </Card>
+          <div className="space-y-4">
+            <p className="font-mono text-xs tracking-[0.14em] text-neutral-500">{book.relationshipNote}</p>
+            <Card title={book.bookTitle} description={book.blurb} imageSrc={book.coverImage} imageAlt={book.bookTitle}>
+              <p className="text-sm leading-relaxed text-neutral-600">{book.why}</p>
+              <div className="flex flex-wrap gap-4 text-sm">
+                {book.buyLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={isInternalHref(link.url) ? withBasePath(link.url) : link.url}
+                    className="underline underline-offset-4"
+                    target={link.url.startsWith("http") ? "_blank" : undefined}
+                    rel={link.url.startsWith("http") ? "noreferrer" : undefined}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
       </Section>
 
-      <Section title={projects.title} intro={projects.intro} kicker="06 / PROJECTS">
+      <Section title={projects.title} intro={projects.intro} kicker="05 / PROJECTS">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.items.map((project) => (
             <article key={project.name} className="rounded-2xl border border-neutral-200 p-5 transition-shadow hover:shadow-sm">
@@ -107,7 +116,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
+      <Section title={talk.title} intro={talk.intro} kicker="06 / TALK">
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-2xl border border-neutral-200 p-5">
             <h3 className="text-base font-medium">{talk.title}</h3>
@@ -139,7 +148,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={socials.title} kicker="08 / ELSEWHERE">
+      <Section title={socials.title} kicker="07 / ELSEWHERE">
         <div className="grid gap-3 md:grid-cols-2">
           {socials.items.map((item) => (
             <a

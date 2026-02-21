@@ -67,6 +67,8 @@ type SiteData = {
     coverImage: string;
     blurb: string;
     why: string;
+    fromPodcastId: string;
+    relationshipNote: string;
     buyLinks: Array<{ label: string; url: string }>;
   };
   projects: {
@@ -159,6 +161,16 @@ export const siteData: SiteData = {
         y: 55,
       },
       {
+        id: "global-nomad",
+        country_cn: "全球旅居",
+        city_cn: "",
+        title_cn: "在路上重写生活",
+        body_cn:
+          "从固定城市切换到流动生活后，工作、关系和节奏都被重新排列。不断移动让我更清楚：想过怎样的生活，比“应该在哪里”更重要。",
+        x: 68,
+        y: 50,
+      },
+      {
         id: "tokyo",
         country_cn: "东京",
         city_cn: "",
@@ -247,13 +259,15 @@ export const siteData: SiteData = {
 
   book: {
     title: "书",
-    bookTitle: "我的书（占位）",
+    bookTitle: "《噢！妈妈》故事整理（新书筹备中）",
     coverImage: "/images/book.jpg",
-    blurb: "一句话简介：这本书写的是什么、为什么值得读（占位）。",
-    why: "为什么写它（占位）：它对应我人生的某一段阶段，也是一种把混乱整理成语言的尝试。",
+    blurb: "基于《噢！妈妈》长期访谈与节目内容，整理中国女性真实经验与生命叙事。",
+    why: "从播客走到书写，是把声音沉淀成可以被长期阅读、反复回看的文本。",
+    fromPodcastId: "ohmama",
+    relationshipNote: "这本书基于《噢！妈妈》长期访谈与叙事整理而来。",
     buyLinks: [
-      { label: "购买链接（占位）", url: "#" },
-      { label: "了解更多", url: "#" },
+      { label: "关注《噢！妈妈》", url: "https://ohmama.simona.life" },
+      { label: "订阅更新通知", url: "https://thepodluckclub.com/" },
     ],
   },
 

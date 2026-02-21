@@ -15,7 +15,7 @@ export default function LifeInMotion() {
         stops={lifeInMotion.stops}
         activeStopId={activeStopId}
         setActiveStopId={setActiveStopId}
-        className="grid gap-3 md:grid-cols-2 xl:grid-cols-4"
+        className="grid gap-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5"
       />
     </Section>
   );
