@@ -19,6 +19,7 @@ function toDateLabel(value: string) {
 
 export default function HomePage() {
   const { podcastsHosted, newsletter, book, projects, talk, socials } = siteData;
+  const featuredBook = book.items[0];
 
   return (
     <>
@@ -78,25 +79,26 @@ export default function HomePage() {
               </Card>
             ))}
           </div>
-          <div className="space-y-4">
-            <p className="font-mono text-xs tracking-[0.14em] text-neutral-500">{book.relationshipNote}</p>
-            <Card title={book.bookTitle} description={book.blurb} imageSrc={book.coverImage} imageAlt={book.bookTitle}>
-              <p className="text-sm leading-relaxed text-neutral-600">{book.why}</p>
-              <div className="flex flex-wrap gap-4 text-sm">
-                {book.buyLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={isInternalHref(link.url) ? withBasePath(link.url) : link.url}
-                    className="underline underline-offset-4"
-                    target={link.url.startsWith("http") ? "_blank" : undefined}
-                    rel={link.url.startsWith("http") ? "noreferrer" : undefined}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+          {featuredBook ? (
+            <article className="rounded-2xl border border-neutral-200 bg-[rgba(255,255,255,0.86)] p-5">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Book highlight</p>
+              <h3 className="mt-3 text-xl font-medium tracking-tight text-neutral-900">《我为什么（不）想成为妈妈》</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-600">根据《噢妈妈》的部分采访整理成文稿</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">2025-02</span>
+                <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">168,311字</span>
+                <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">纪实</span>
               </div>
-            </Card>
-          </div>
+              <a
+                href={isInternalHref(featuredBook.url) ? withBasePath(featuredBook.url) : featuredBook.url}
+                className="mt-5 inline-block rounded-full border border-neutral-900 bg-neutral-900 px-4 py-2 text-sm text-white transition-colors hover:bg-neutral-800"
+                target={featuredBook.url.startsWith("http") ? "_blank" : undefined}
+                rel={featuredBook.url.startsWith("http") ? "noreferrer" : undefined}
+              >
+                去微信读书阅读
+              </a>
+            </article>
+          ) : null}
         </div>
       </Section>
 

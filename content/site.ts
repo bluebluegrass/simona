@@ -70,6 +70,16 @@ type SiteData = {
     why: string;
     fromPodcastId: string;
     relationshipNote: string;
+    items: Array<{
+      title: string;
+      subtitle: string;
+      platform: string;
+      publishDate: string;
+      wordCount: number;
+      category: string;
+      url: string;
+      topics: string[];
+    }>;
     buyLinks: Array<{ label: string; url: string }>;
   };
   projects: {
@@ -202,7 +212,7 @@ export const siteData: SiteData = {
     items: [
       {
         id: "ohmama",
-        title: "噢！妈妈",
+        title: "噢妈妈",
         description: "讲述属于中国女性的真实故事，相信女性的声音和讲述的力量。",
         coverImage: "/images/podcast-ohmama.jpg",
         links: {
@@ -262,15 +272,27 @@ export const siteData: SiteData = {
 
   book: {
     title: "书",
-    bookTitle: "《噢！妈妈》故事整理（新书筹备中）",
+    bookTitle: "我为什么（不）想成为妈妈",
     coverImage: "/images/book.jpg",
-    blurb: "基于《噢！妈妈》长期访谈与节目内容，整理中国女性真实经验与生命叙事。",
-    why: "从播客走到书写，是把声音沉淀成可以被长期阅读、反复回看的文本。",
+    blurb: "从《噢妈妈》访谈出发，把真实对话整理为转录文稿，再编辑成可长期阅读的书。",
+    why: "这本书沿着「播客采访 -> 转录整理 -> 纪实成书」的路径，把女性生命经验沉淀成文本。",
     fromPodcastId: "ohmama",
-    relationshipNote: "这本书基于《噢！妈妈》长期访谈与叙事整理而来。",
+    relationshipNote: "这本书基于《噢妈妈》长期访谈与叙事整理而来。",
+    items: [
+      {
+        title: "我为什么（不）想成为妈妈",
+        subtitle: "根据《噢妈妈》的部分采访整理成文稿",
+        platform: "微信读书",
+        publishDate: "2025-02",
+        wordCount: 168311,
+        category: "纪实文学",
+        url: "https://weread.qq.com/web/bookDetail/1fd32ce0813ab99d7g014a4c",
+        topics: ["生育选择", "不婚不育", "丁克", "母职", "女性处境"],
+      },
+    ],
     buyLinks: [
-      { label: "关注《噢！妈妈》", url: "https://ohmama.simona.life" },
-      { label: "订阅更新通知", url: "https://thepodluckclub.com/" },
+      { label: "微信读书阅读", url: "https://weread.qq.com/web/bookDetail/1fd32ce0813ab99d7g014a4c" },
+      { label: "关注《噢妈妈》", url: "https://ohmama.simona.life" },
     ],
   },
 
