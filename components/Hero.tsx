@@ -9,14 +9,21 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="max-w-4xl border-l border-neutral-300 pl-5 md:pl-8">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-neutral-500">{siteData.meta.siteName}</p>
-          <h1 className="mt-5 text-4xl font-medium tracking-tight text-neutral-900 md:text-6xl">
+          <h1 className="mt-5 max-w-3xl text-4xl font-medium tracking-tight text-neutral-900 md:text-6xl">
             {hero.titleLines.map((line) => (
-              <span key={line} className="block">
+              <span key={line} className="block leading-[1.2]">
                 {line}
               </span>
             ))}
           </h1>
-          <p className="mt-7 text-sm leading-relaxed text-neutral-500 md:text-base">{hero.subtitle}</p>
+          <p className="mt-7 max-w-2xl text-sm leading-relaxed text-neutral-500 md:text-base">{hero.subtitle}</p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {hero.proofBadges.map((badge) => (
+              <span key={badge} className="rounded-full border border-neutral-300 bg-[rgba(255,255,255,0.65)] px-3 py-1 text-xs text-neutral-600">
+                {badge}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="mt-12 flex flex-wrap gap-3">
           <Link

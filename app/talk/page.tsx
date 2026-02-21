@@ -14,18 +14,18 @@ export default function TalkPage() {
     <Section title={talk.title} intro={talk.intro}>
       <div className="grid gap-5 md:grid-cols-3">
         <article className="rounded-2xl border border-neutral-200 p-5">
-          <h3 className="text-base font-medium tracking-tight">{talk.title}</h3>
+          <h3 className="text-base font-medium tracking-tight">这次聊天适合你，如果…</h3>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
-            {talk.whoItsFor.map((item) => (
+            {talk.goodFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </article>
 
         <article className="rounded-2xl border border-neutral-200 p-5">
-          <h3 className="text-base font-medium tracking-tight">{talk.cta.label}</h3>
+          <h3 className="text-base font-medium tracking-tight">这次聊天不太适合，如果…</h3>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
-            {talk.topics.map((item) => (
+            {talk.notFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

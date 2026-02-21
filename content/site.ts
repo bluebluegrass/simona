@@ -17,8 +17,9 @@ type SiteData = {
     cta: { label: string; href: string };
   };
   hero: {
-    titleLines: [string, string, string];
+    titleLines: string[];
     subtitle: string;
+    proofBadges: [string, string, string];
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
   };
@@ -88,6 +89,8 @@ type SiteData = {
     calendlyUrl: string;
     whoItsFor: string[];
     topics: string[];
+    goodFor: string[];
+    notFor: string[];
     logistics: string[];
     cta: { label: string; href: string };
   };
@@ -110,7 +113,7 @@ export const siteData: SiteData = {
     siteName: "穿堂风Simona",
     baseTitle: "穿堂风Simona | 流动的人生",
     baseDescription:
-      "我是穿堂风Simona，曾经的互联网数据打工人，2022年11月被 Facebook 裁员后开启数字游民生活，目前在日本定居，持续做播客、写作与社区项目。",
+      "我是穿堂风Simona，前 Meta 数据工程师，长期播客推荐与 Newsletter 写作者，目前常住阿姆斯特丹。",
   },
 
   header: {
@@ -126,11 +129,11 @@ export const siteData: SiteData = {
 
   hero: {
     titleLines: [
-      "很开心遇见你，我是穿堂风Simona。",
-      "2022年11月被 Facebook 裁员后，",
-      "我开启数字游民生活，并在日本定居。",
+      "在流动里练习稳定，",
+      "在讲述里重新认识自己。",
     ],
-    subtitle: "播客 · Newsletter · 写作 · 一些仍在进行的生活实验",
+    subtitle: "前 Meta 数据工程师；2022 年后开启数字游民生活，现常住阿姆斯特丹。",
+    proofBadges: ["7年播客推荐", "每日1集", "双周长信"],
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
   },
@@ -316,11 +319,22 @@ export const siteData: SiteData = {
       "从零开始做播客：选题、访谈、技术与发布",
       "如何在内容创作与现实生活之间找到可持续节奏",
     ],
+    goodFor: [
+      "你正在迁移或转折期，需要把当下的混乱理成可执行的下一步。",
+      "你想开始 Newsletter / 播客，但不知道如何稳定输出。",
+      "你有很多真实经历，想整理成长期内容或项目。",
+      "你希望聊法务/移民之外，更现实的心理与节奏问题。",
+    ],
+    notFor: [
+      "如果你想要标准答案或速成模板，这次聊天可能不适合。",
+      "如果你期待正式咨询报告或代执行服务，这里不会提供。",
+      "如果你处于紧急心理危机，请优先联系当地专业支持资源。",
+    ],
     logistics: [
       "形式：线上 1:1 coffee chat",
       "时长：30 分钟（可延长）",
       "语言：中文 / English",
-      "时区：Asia/Tokyo",
+      "时区：Amsterdam（CET/CEST）",
     ],
     cta: { label: "预约一段对话", href: "/talk" },
   },
