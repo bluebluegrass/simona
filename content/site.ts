@@ -6,6 +6,14 @@ type PlatformLinks = {
   rss: string;
 };
 
+type CanonicalPlatformLinks = {
+  spotify?: string;
+  apple?: string;
+  xiaoyuzhou?: string;
+  youtube?: string;
+  rss?: string;
+};
+
 type SiteData = {
   meta: {
     siteName: string;
@@ -46,6 +54,8 @@ type SiteData = {
       description: string;
       coverImage: string;
       links: PlatformLinks;
+      platformLinks?: CanonicalPlatformLinks;
+      startHere: Array<{ title: string; url: string }>;
       latestEpisodeUrl: string;
     }>;
   };
@@ -222,6 +232,14 @@ export const siteData: SiteData = {
           youtube: "https://www.youtube.com/channel/UCHh3PxWb7aIQr9aUo1pEgJA",
           rss: "https://ohmama.simona.life",
         },
+        platformLinks: {
+          spotify: "https://open.spotify.com/show/1AUhH0zNMxuwuILEoFvDrK",
+        },
+        startHere: [
+          { title: "入门第 1 集（占位）", url: "#" },
+          { title: "入门第 2 集（占位）", url: "#" },
+          { title: "入门第 3 集（占位）", url: "#" },
+        ],
         latestEpisodeUrl: "https://ohmama.simona.life",
       },
       {
@@ -236,6 +254,14 @@ export const siteData: SiteData = {
           youtube: "https://www.youtube.com/channel/UCHh3PxWb7aIQr9aUo1pEgJA",
           rss: "https://blog.simona.life/feed/audio.xml",
         },
+        platformLinks: {
+          apple: "https://podcasts.apple.com/ca/podcast/sago%E6%95%A3%E8%AE%B2/id1671385373",
+        },
+        startHere: [
+          { title: "入门第 1 集（占位）", url: "#" },
+          { title: "入门第 2 集（占位）", url: "#" },
+          { title: "入门第 3 集（占位）", url: "#" },
+        ],
         latestEpisodeUrl: "https://blog.simona.life/episodes/",
       },
     ],
