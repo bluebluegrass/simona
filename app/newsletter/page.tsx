@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import GhostSignupEmbed from "@/components/GhostSignupEmbed";
 import Section from "@/components/Section";
 import SubscribeForm from "@/components/SubscribeForm";
 import { siteData } from "@/content/site";
@@ -20,8 +21,10 @@ export default function NewsletterPage() {
   return (
     <Section title={newsletter.title} intro={newsletter.valueProp}>
       <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-4 rounded-2xl border border-neutral-200 p-6">
+        <div className="space-y-5 rounded-2xl border border-neutral-200 p-5 md:p-6">
           <h2 className="text-xl font-medium tracking-tight">{newsletter.name}</h2>
+          <GhostSignupEmbed />
+          <p className="text-center text-xs tracking-[0.08em] text-neutral-500">或跳转订阅页</p>
           <SubscribeForm />
           <p className="text-sm text-neutral-500">{newsletter.formHint}</p>
         </div>
