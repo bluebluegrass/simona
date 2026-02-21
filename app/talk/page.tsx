@@ -1,0 +1,48 @@
+import type { Metadata } from "next";
+import Section from "@/components/Section";
+import { siteData } from "@/content/site";
+import { isInternalHref, withBasePath } from "@/lib/basePath";
+
+export const metadata: Metadata = {
+  title: "和我聊聊 | 穿堂风Simona",
+};
+
+export default function TalkPage() {
+  const { talk } = siteData;
+
+  return (
+    <Section title={talk.title} intro={talk.intro}>
+      <div className="grid gap-5 md:grid-cols-3">
+        <article className="rounded-2xl border border-neutral-200 p-5">
+          <h3 className="text-base font-medium tracking-tight">{talk.title}</h3>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+            {talk.whoItsFor.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="rounded-2xl border border-neutral-200 p-5">
+          <h3 className="text-base font-medium tracking-tight">{talk.cta.label}</h3>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+            {talk.topics.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="rounded-2xl border border-neutral-200 p-5">
+          <h3 className="text-base font-medium tracking-tight">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+            {talk.logistics.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <a href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl} className="mt-5 inline-block rounded-full border border-neutral-900 px-4 py-2 text-sm">
+            {talk.cta.label}
+          </a>
+        </article>
+      </div>
+    </Section>
+  );
+}
