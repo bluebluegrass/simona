@@ -32,7 +32,12 @@ export default function NewsletterPage() {
               <p className="text-xs text-neutral-500">{toDateLabel(issue.date)}</p>
               <h3 className="mt-2 text-base font-medium">{issue.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">{issue.summary}</p>
-              <a href={isInternalHref(issue.url) ? withBasePath(issue.url) : issue.url} className="mt-3 inline-block text-sm underline underline-offset-4">
+              <a
+                href={isInternalHref(issue.url) ? withBasePath(issue.url) : issue.url}
+                className="mt-3 inline-block text-sm underline underline-offset-4"
+                target={issue.url.startsWith("http") ? "_blank" : undefined}
+                rel={issue.url.startsWith("http") ? "noreferrer" : undefined}
+              >
                 {newsletter.title}
               </a>
             </article>

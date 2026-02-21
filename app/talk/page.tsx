@@ -38,7 +38,12 @@ export default function TalkPage() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <a href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl} className="mt-5 inline-block rounded-full border border-neutral-900 px-4 py-2 text-sm">
+          <a
+            href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl}
+            className="mt-5 inline-block rounded-full border border-neutral-900 px-4 py-2 text-sm"
+            target={talk.calendlyUrl.startsWith("http") ? "_blank" : undefined}
+            rel={talk.calendlyUrl.startsWith("http") ? "noreferrer" : undefined}
+          >
             {talk.cta.label}
           </a>
         </article>

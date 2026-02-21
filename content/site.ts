@@ -1,9 +1,114 @@
-export const siteData = {
+type PlatformLinks = {
+  spotify: string;
+  apple: string;
+  xiaoyuzhou: string;
+  youtube: string;
+  rss: string;
+};
+
+type SiteData = {
+  meta: {
+    siteName: string;
+    baseTitle: string;
+    baseDescription: string;
+  };
+  header: {
+    nav: Array<{ label: string; href: string }>;
+    cta: { label: string; href: string };
+  };
+  hero: {
+    titleLines: [string, string, string];
+    subtitle: string;
+    primaryCta: { label: string; href: string };
+    secondaryCta: { label: string; href: string };
+  };
+  lifeInMotion: {
+    title_cn: string;
+    title_en: string;
+    intro_cn: string;
+    stops: Array<{
+      id: string;
+      country_cn: string;
+      city_cn: string;
+      title_cn: string;
+      body_cn: string;
+      x: number;
+      y: number;
+    }>;
+  };
+  podcastsHosted: {
+    title: string;
+    intro: string;
+    items: Array<{
+      id: string;
+      title: string;
+      description: string;
+      coverImage: string;
+      links: PlatformLinks;
+      latestEpisodeUrl: string;
+    }>;
+  };
+  newsletter: {
+    title: string;
+    name: string;
+    valueProp: string;
+    subscribeUrl: string;
+    formHint: string;
+    recentIssues: Array<{
+      title: string;
+      summary: string;
+      url: string;
+      date: string;
+    }>;
+  };
+  book: {
+    title: string;
+    bookTitle: string;
+    coverImage: string;
+    blurb: string;
+    why: string;
+    buyLinks: Array<{ label: string; url: string }>;
+  };
+  projects: {
+    title: string;
+    intro: string;
+    items: Array<{
+      name: string;
+      description: string;
+      tags: string[];
+      link: string;
+      status: string;
+    }>;
+  };
+  talk: {
+    title: string;
+    intro: string;
+    calendlyUrl: string;
+    whoItsFor: string[];
+    topics: string[];
+    logistics: string[];
+    cta: { label: string; href: string };
+  };
+  socials: {
+    title: string;
+    items: Array<{ platform: string; url: string; description: string }>;
+  };
+  ui: {
+    latestEpisodeLabel: string;
+  };
+  footer: {
+    contactEmail: string;
+    note: string;
+    copyright: string;
+  };
+};
+
+export const siteData: SiteData = {
   meta: {
     siteName: "穿堂风Simona",
     baseTitle: "穿堂风Simona | 流动的人生",
     baseDescription:
-      "美国、新加坡、东京、阿姆斯特丹——在不断迁移的生活里，慢慢学会与世界相处。播客、Newsletter、写作与生活实验。",
+      "我是穿堂风Simona，曾经的互联网数据打工人，2022年11月被 Facebook 裁员后开启数字游民生活，目前在日本定居，持续做播客、写作与社区项目。",
   },
 
   header: {
@@ -19,9 +124,9 @@ export const siteData = {
 
   hero: {
     titleLines: [
-      "美国、新加坡、东京、阿姆斯特丹——",
-      "在不断迁移的生活里，",
-      "慢慢学会与世界相处。",
+      "很开心遇见你，我是穿堂风Simona。",
+      "2022年11月被 Facebook 裁员后，",
+      "我开启数字游民生活，并在日本定居。",
     ],
     subtitle: "播客 · Newsletter · 写作 · 一些仍在进行的生活实验",
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
@@ -32,7 +137,6 @@ export const siteData = {
     title_cn: "流动的人生",
     title_en: "A life in motion",
     intro_cn: "在不同国家生活，不只是地理移动。\n更像是一种不断拆掉旧身份、重新开始的过程。",
-    // SVG viewBox: 0 0 100 70（x,y 为相对坐标）
     stops: [
       {
         id: "usa",
@@ -82,32 +186,32 @@ export const siteData = {
     intro: "这是我把想法说出来的地方：更慢、更真诚，也更接近当下。",
     items: [
       {
-        id: "podcast-1",
-        title: "播客一（占位）",
-        description: "一句话描述：这档播客的气质、适合什么时候听。",
-        coverImage: "/images/podcast1.jpg",
+        id: "ohmama",
+        title: "噢！妈妈",
+        description: "讲述属于中国女性的真实故事，相信女性的声音和讲述的力量。",
+        coverImage: "/images/podcast-ohmama.jpg",
         links: {
-          spotify: "#",
-          apple: "#",
-          xiaoyuzhou: "#",
-          youtube: "#",
-          rss: "#",
+          spotify: "https://open.spotify.com/show/1AUhH0zNMxuwuILEoFvDrK",
+          apple: "https://ohmama.simona.life",
+          xiaoyuzhou: "https://ohmama.simona.life",
+          youtube: "https://www.youtube.com/channel/UCHh3PxWb7aIQr9aUo1pEgJA",
+          rss: "https://ohmama.simona.life",
         },
-        latestEpisodeUrl: "#",
+        latestEpisodeUrl: "https://ohmama.simona.life",
       },
       {
-        id: "podcast-2",
-        title: "播客二（占位）",
-        description: "一句话描述：更偏访谈/独白/纪录片式？（占位）",
-        coverImage: "/images/podcast2.jpg",
+        id: "sago",
+        title: "sàgó散讲",
+        description: "散讲 with Simona，在每一个公园长椅上向你发送电波。",
+        coverImage: "/images/podcast-sago.jpg",
         links: {
-          spotify: "#",
-          apple: "#",
-          xiaoyuzhou: "#",
-          youtube: "#",
-          rss: "#",
+          spotify: "https://open.spotify.com/show/49gsbyIxARl4tJZfrMyBkx",
+          apple: "https://blog.simona.life/episodes/",
+          xiaoyuzhou: "https://blog.simona.life/episodes/",
+          youtube: "https://www.youtube.com/channel/UCHh3PxWb7aIQr9aUo1pEgJA",
+          rss: "https://blog.simona.life/feed/audio.xml",
         },
-        latestEpisodeUrl: "#",
+        latestEpisodeUrl: "https://blog.simona.life/episodes/",
       },
     ],
   },
@@ -116,26 +220,26 @@ export const siteData = {
     title: "播客推荐 Newsletter",
     name: "The Pod Luck Club",
     valueProp:
-      "每天一则播客推荐，每两周一封长信。\n我帮你在浩如烟海的播客里筛选信号，也记录流动人生里那些没人教我们的部分。",
-    subscribeUrl: "#", // 先占位：可替换成 Ghost 订阅链接
-    formHint: "先用跳转订阅链接即可，不需要真正后端。",
+      "优质播客推荐计划。日听播客三百集，每天推荐一期我喜欢的播客，每两周一篇发自世界某个角落的人生冒险故事。",
+    subscribeUrl: "https://thepodluckclub.com/",
+    formHint: "点击订阅后会跳转到 The Pod Luck Club 官方页面。",
     recentIssues: [
       {
-        title: "最近一期（占位）：在不确定里保持呼吸",
-        summary: "一段生活记录 + 3 集播客推荐（占位）",
-        url: "#",
+        title: "最近更新：优质播客推荐计划",
+        summary: "每日一档推荐 + 双周长信，持续记录听见与流动中的生活。",
+        url: "https://thepodluckclub.com/",
         date: "2026-02-01",
       },
       {
-        title: "最近一期（占位）：当生活突然断线",
-        summary: "写给处在转折期的你（占位）",
-        url: "#",
+        title: "最近更新：发自世界角落的长信",
+        summary: "在迁移、工作与创作之间，持续写下真实感受与选择。",
+        url: "https://thepodluckclub.com/",
         date: "2026-01-15",
       },
       {
-        title: "最近一期（占位）：慢慢来，反而更快",
-        summary: "关于节奏、选择与长期主义（占位）",
-        url: "#",
+        title: "最近更新：我喜欢的播客清单",
+        summary: "筛选信号而非噪音，把好节目稳定送到你邮箱。",
+        url: "https://thepodluckclub.com/",
         date: "2025-12-28",
       },
     ],
@@ -145,10 +249,8 @@ export const siteData = {
     title: "书",
     bookTitle: "我的书（占位）",
     coverImage: "/images/book.jpg",
-    blurb:
-      "一句话简介：这本书写的是什么、为什么值得读（占位）。",
-    why:
-      "为什么写它（占位）：它对应我人生的某一段阶段，也是一种把混乱整理成语言的尝试。",
+    blurb: "一句话简介：这本书写的是什么、为什么值得读（占位）。",
+    why: "为什么写它（占位）：它对应我人生的某一段阶段，也是一种把混乱整理成语言的尝试。",
     buyLinks: [
       { label: "购买链接（占位）", url: "#" },
       { label: "了解更多", url: "#" },
@@ -157,29 +259,28 @@ export const siteData = {
 
   projects: {
     title: "项目 / 实验",
-    intro:
-      "一些还在进行中的东西。它们不一定完成，但都真实地发生。",
+    intro: "一些还在进行中的东西。它们不一定完成，但都真实地发生。",
     items: [
       {
-        name: "个人 AI 助手（占位）",
-        description: "用我的公开内容做一个可对话的知识库与写作助手。",
-        tags: ["AI", "写作", "知识库"],
-        link: "#",
-        status: "WIP",
+        name: "WomenOverseas 她乡",
+        description: "海外华人女性社区，连接女性与 non-binary，一起探索更广阔的世界。",
+        tags: ["Community", "Women", "Overseas"],
+        link: "https://womenoverseas.com",
+        status: "Active",
       },
       {
-        name: "播客推荐数据库（占位）",
-        description: "把多年的播客推荐做成可检索、可探索的系统。",
-        tags: ["Podcast", "Search", "Data"],
-        link: "#",
-        status: "WIP",
+        name: "穿堂风博客",
+        description: "在每一个咖啡店里记录下此刻的心情，持续发布生活与迁移中的文字。",
+        tags: ["Writing", "Life", "Blog"],
+        link: "https://blog.simona.life/",
+        status: "Active",
       },
       {
-        name: "出海生活实验（占位）",
-        description: "把迁移、语言、工作与生活组织成可复用的方法。",
-        tags: ["Life", "Systems"],
-        link: "#",
-        status: "Notes",
+        name: "播客 Coaching Session",
+        description: "从零开始启动播客，从设备、访谈到后期，帮助你更快完成第一季。",
+        tags: ["Podcast", "Coaching", "Creator"],
+        link: "https://www.buymeacoffee.com/simonana/e/107286",
+        status: "Open",
       },
     ],
   },
@@ -187,25 +288,25 @@ export const siteData = {
   talk: {
     title: "和我聊聊",
     intro:
-      "如果你也在迁移、转折或重建的路上，我们可以聊一聊。不是咨询，更像一杯咖啡的对话。",
-    calendlyUrl: "#", // 替换成你的 Calendly
+      "如果你也在迁移、转折或重建的路上，我们可以来一场 1:1 coffee chat。结合我的数字游民与跨国生活经验，聊聊你当下最具体的困惑。",
+    calendlyUrl: "https://buymeacoffee.com/simonana/e/336214",
     whoItsFor: [
-      "正在考虑海外生活/迁移的人",
-      "处在职业转折期、想理清方向的人",
-      "想建立写作/创作系统的人",
-      "想把个人经历做成作品或项目的人",
+      "正在考虑数字游民/海外生活的人",
+      "处在职业转折期、想理清下一步方向的人",
+      "准备开始 Newsletter 或播客创作的人",
+      "希望把个人经历沉淀为作品或长期项目的人",
     ],
     topics: [
-      "跨国家生活：现实与心理落差",
-      "职业转折：如何处理不确定",
-      "内容创作：newsletter / 播客的长期主义",
-      "个人项目：从想法到最小可行版本",
+      "Gap 与全球旅居：做了两年后，我学到了什么",
+      "从被裁员到重建生活系统：如何处理不确定",
+      "从零开始做播客：选题、访谈、技术与发布",
+      "如何在内容创作与现实生活之间找到可持续节奏",
     ],
     logistics: [
-      "形式：线上 1:1",
-      "时长：30 或 60 分钟（占位）",
-      "语言：中文 / 英文",
-      "时区：Europe/Amsterdam",
+      "形式：线上 1:1 coffee chat",
+      "时长：30 分钟（可延长）",
+      "语言：中文 / English",
+      "时区：Asia/Tokyo",
     ],
     cta: { label: "预约一段对话", href: "/talk" },
   },
@@ -213,21 +314,41 @@ export const siteData = {
   socials: {
     title: "我在其他地方",
     items: [
-      { platform: "小红书", url: "#", description: "工作与流动人生碎片，带一点幽默。" },
-      { platform: "Newsletter", url: "/newsletter", description: "更完整的记录与长期对话。" },
-      { platform: "Podcast", url: "/podcasts", description: "把想法说出来的地方。" },
-      { platform: "GitHub", url: "#", description: "项目与实验（占位）。" },
-      { platform: "LinkedIn", url: "#", description: "职业向信息与经历（占位）。" },
+      {
+        platform: "Telegram",
+        url: "https://t.me/daily_dose_podcast",
+        description: "播客相关更新与日常碎片。",
+      },
+      {
+        platform: "Mastodon",
+        url: "https://m.cmx.im/@bluegrass",
+        description: "公开写作与个人观察。",
+      },
+      {
+        platform: "小红书",
+        url: "https://www.xiaohongshu.com/user/profile/5fc5b484000000000100bcad",
+        description: "关于工作、迁移与生活的真实记录。",
+      },
+      {
+        platform: "YouTube",
+        url: "https://www.youtube.com/channel/UCHh3PxWb7aIQr9aUo1pEgJA",
+        description: "节目与相关内容更新。",
+      },
+      {
+        platform: "Newsletter",
+        url: "https://thepodluckclub.com/",
+        description: "每天一档播客推荐，每两周一封长信。",
+      },
     ],
   },
 
   ui: {
-    latestEpisodeLabel: "最新一期",
+    latestEpisodeLabel: "最新内容",
   },
 
   footer: {
-    contactEmail: "hello@example.com",
-    note: "如果你喜欢这里，欢迎订阅 Newsletter。我们慢慢走，不着急。",
+    contactEmail: "hey.simonalife@gmail.com",
+    note: "欢迎给我写邮件，或者在 Newsletter 里继续这场慢慢展开的对话。",
     copyright: "© " + new Date().getFullYear() + " 穿堂风Simona",
   },
-} as const;
+};

@@ -18,12 +18,23 @@ export default function PodcastsPage() {
           <Card key={podcast.id} title={podcast.title} description={podcast.description} imageSrc={podcast.coverImage} imageAlt={podcast.title}>
               <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-neutral-600">
                 {Object.entries(podcast.links).map(([platform, url]) => (
-                  <a key={platform} href={isInternalHref(url) ? withBasePath(url) : url} className="underline underline-offset-4">
+                  <a
+                    key={platform}
+                    href={isInternalHref(url) ? withBasePath(url) : url}
+                    className="underline underline-offset-4"
+                    target={url.startsWith("http") ? "_blank" : undefined}
+                    rel={url.startsWith("http") ? "noreferrer" : undefined}
+                  >
                     {platform}
                   </a>
                 ))}
               </div>
-              <a href={isInternalHref(podcast.latestEpisodeUrl) ? withBasePath(podcast.latestEpisodeUrl) : podcast.latestEpisodeUrl} className="inline-block text-sm underline underline-offset-4">
+              <a
+                href={isInternalHref(podcast.latestEpisodeUrl) ? withBasePath(podcast.latestEpisodeUrl) : podcast.latestEpisodeUrl}
+                className="inline-block text-sm underline underline-offset-4"
+                target={podcast.latestEpisodeUrl.startsWith("http") ? "_blank" : undefined}
+                rel={podcast.latestEpisodeUrl.startsWith("http") ? "noreferrer" : undefined}
+              >
                 {siteData.ui.latestEpisodeLabel}
               </a>
             </Card>
