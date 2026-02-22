@@ -287,12 +287,6 @@ export const siteData: SiteData = {
         url: "https://thepodluckclub.com/",
         date: "2026-01-15",
       },
-      {
-        title: "最近更新：我喜欢的播客清单",
-        summary: "筛选信号而非噪音，把好节目稳定送到你邮箱。",
-        url: "https://thepodluckclub.com/",
-        date: "2025-12-28",
-      },
     ],
   },
 
