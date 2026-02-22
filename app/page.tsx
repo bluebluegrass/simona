@@ -20,10 +20,49 @@ function toDateLabel(value: string) {
 export default function HomePage() {
   const { podcastsHosted, newsletter, book, projects, talk, socials } = siteData;
   const featuredBook = book.items[0];
+  const featuredIssue = newsletter.recentIssues[0];
 
   return (
     <>
       <Hero />
+      {featuredIssue ? (
+        <section className="pb-6 md:pb-10">
+          <div className="mx-auto max-w-6xl px-5 md:px-8">
+            <article className="rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] p-5 md:p-6">
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Newsletter</p>
+              <h2 className="mt-3 text-xl font-medium tracking-tight text-neutral-900 md:text-2xl">{newsletter.name}</h2>
+              <p className="mt-2 text-sm text-neutral-600">每个工作日精选播客｜双周 3000 字长信</p>
+
+              <div className="mt-4 border-t border-neutral-200 pt-4">
+                <p className="text-xs text-neutral-500">{toDateLabel(featuredIssue.date)}</p>
+                <h3 className="mt-2 text-base font-medium text-neutral-900 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:1] overflow-hidden">
+                  {featuredIssue.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] overflow-hidden">
+                  {featuredIssue.summary}
+                </p>
+              </div>
+
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <a
+                  href={withBasePath("/newsletter")}
+                  className="rounded-full border border-neutral-900 bg-neutral-900 px-4 py-2 text-sm text-white transition-colors hover:bg-neutral-800"
+                >
+                  订阅
+                </a>
+                <a
+                  href={isInternalHref(featuredIssue.url) ? withBasePath(featuredIssue.url) : featuredIssue.url}
+                  className="text-sm underline underline-offset-4"
+                  target={featuredIssue.url.startsWith("http") ? "_blank" : undefined}
+                  rel={featuredIssue.url.startsWith("http") ? "noreferrer noopener" : undefined}
+                >
+                  读最近一期
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+      ) : null}
       <LifeInMotion />
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
