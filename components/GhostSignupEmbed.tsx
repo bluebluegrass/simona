@@ -2,23 +2,24 @@
 
 import { useEffect, useRef } from "react";
 
+const GHOST_SCRIPT_ID = "ghost-signup-form-script";
+
 export default function GhostSignupEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) {
+    if (!containerRef.current || document.getElementById(GHOST_SCRIPT_ID)) {
       return;
     }
 
-    containerRef.current.innerHTML = "";
-
     const script = document.createElement("script");
+    script.id = GHOST_SCRIPT_ID;
     script.async = true;
     script.src = "https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js";
 
-    script.setAttribute("data-background-color", "#ffffff");
-    script.setAttribute("data-text-color", "#000000");
-    script.setAttribute("data-button-color", "#e9781c");
+    script.setAttribute("data-background-color", "#FCFCFB");
+    script.setAttribute("data-text-color", "#141413");
+    script.setAttribute("data-button-color", "#141413");
     script.setAttribute("data-button-text-color", "#FFFFFF");
     script.setAttribute("data-title", "The Pod Luck Club｜播客推荐 Newsletter");
     script.setAttribute(
@@ -33,18 +34,12 @@ export default function GhostSignupEmbed() {
     script.setAttribute("data-locale", "zh");
 
     containerRef.current.appendChild(script);
-
-    return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = "";
-      }
-    };
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="overflow-hidden rounded-xl border border-neutral-200 bg-white"
+      className="overflow-hidden rounded-xl border border-border bg-surface"
       style={{ height: "40vmin", minHeight: "360px" }}
       aria-label="Ghost signup form"
     />

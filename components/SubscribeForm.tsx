@@ -2,14 +2,13 @@
 
 import { FormEvent, useState } from "react";
 import { siteData } from "@/content/site";
-import { withBasePath } from "@/lib/basePath";
 
 export default function SubscribeForm() {
   const [value, setValue] = useState("");
 
   function onSubmit(event: FormEvent) {
     event.preventDefault();
-    window.location.href = withBasePath(siteData.newsletter.subscribeUrl);
+    window.open(siteData.newsletter.subscribeUrl, "_blank", "noopener,noreferrer");
   }
 
   return (

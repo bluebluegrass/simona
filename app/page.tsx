@@ -28,12 +28,12 @@ export default function HomePage() {
       {featuredIssue ? (
         <section className="pb-6 md:pb-10">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] p-5 md:p-6">
+            <article className="rounded-2xl border border-border bg-surface p-5 md:p-6">
               <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Newsletter</p>
               <h2 className="mt-3 text-xl font-medium tracking-tight text-neutral-900 md:text-2xl">{newsletter.name}</h2>
               <p className="mt-2 text-sm text-neutral-600">每个工作日精选播客｜双周 3000 字长信</p>
 
-              <div className="mt-4 border-t border-neutral-200 pt-4">
+              <div className="mt-4 border-t border-border pt-4">
                 <p className="text-xs text-neutral-500">{toDateLabel(featuredIssue.date)}</p>
                 <h3 className="mt-2 text-base font-medium text-neutral-900 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:1] overflow-hidden">
                   {featuredIssue.title}
@@ -67,7 +67,7 @@ export default function HomePage() {
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
         <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-4 rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] p-5">
+          <div className="space-y-4 rounded-2xl border border-border bg-surface p-5">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-neutral-500">Join The Journal</p>
             <h3 className="text-xl font-medium tracking-tight">{newsletter.name}</h3>
             <SubscribeForm />
@@ -75,7 +75,7 @@ export default function HomePage() {
           </div>
           <div className="grid gap-3">
             {newsletter.recentIssues.slice(0, 3).map((issue) => (
-              <article key={issue.title} className="rounded-2xl border border-neutral-200 bg-[rgba(255,255,255,0.8)] p-5 transition-shadow hover:shadow-sm">
+              <article key={issue.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
                 <p className="font-mono text-xs tracking-[0.12em] text-neutral-500">{toDateLabel(issue.date)}</p>
                 <h4 className="mt-2 text-base font-medium">{issue.title}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-neutral-600">{issue.summary}</p>
