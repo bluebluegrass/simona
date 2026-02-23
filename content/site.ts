@@ -178,8 +178,8 @@ export const siteData: SiteData = {
   },
 
   helpHub: {
-    title: "我可以怎么帮你？",
-    intro: "如果你是第一次来，可以从这里开始。都是我自己长期在做、也最常被问到的三件事。",
+    title: "先从这里开始",
+    intro: "如果你第一次来，这三件事最能代表我现在在做的内容，也最容易帮你快速找到入口。",
     items: [
       {
         title: "每天一集播客推荐",
