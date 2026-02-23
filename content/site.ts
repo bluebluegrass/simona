@@ -186,7 +186,7 @@ export const siteData: SiteData = {
       "我是穿堂风 Simona。",
     ],
     subtitle: "前 Meta 数据工程师。2022 年被裁员后开启数字游民生活，现在常住阿姆斯特丹。",
-    proofBadges: ["7年播客推荐", "每日1集精选", "双周3000字长信"],
+    proofBadges: ["1780期每日推荐", "150篇长文", "持续7年"],
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
   },
@@ -197,7 +197,7 @@ export const siteData: SiteData = {
     items: [
       {
         title: "每天一集播客推荐",
-        description: "The Pod Luck Club：每天推荐一期我喜欢的播客，双周一封 3000 字长信。",
+        description: "The Pod Luck Club：累计 1780 期每日播客推荐，累计 150 篇长文（周更）。",
         href: "/newsletter",
         ctaLabel: "订阅 Newsletter",
         tone: "newsletter",
@@ -238,7 +238,7 @@ export const siteData: SiteData = {
       "前 Meta 数据工程师，做过完整的数据与内容系统工作。",
       "在美国生活 8 年，后来主动放弃绿卡，重选人生路径。",
       "跨新加坡、日本、阿姆斯特丹重建生活与工作节奏。",
-      "长期创作：7 年播客推荐 + 双周 Newsletter 长信。",
+      "长期创作：累计 1780 期每日推荐 + 150 篇周更长文。",
     ],
   },
 
@@ -392,7 +392,7 @@ export const siteData: SiteData = {
     title: "播客推荐 Newsletter",
     name: "The Pod Luck Club",
     valueProp:
-      "优质播客推荐计划。日听播客三百集，每天推荐一期我喜欢的播客，每两周一篇发自世界某个角落的人生冒险故事。",
+      "优质播客推荐计划。累计 1780 期每日播客推荐，累计 150 篇长文（周更），持续记录我在世界各地的生活、工作与重建。",
     subscribeUrl: "https://thepodluckclub.com/",
     formHint: "点击订阅后会跳转到 The Pod Luck Club 官方页面。",
     recentIssues: [

@@ -65,7 +65,7 @@ export default function HomePage() {
                 <div className="max-w-3xl">
                   <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Newsletter Preview</p>
                   <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{newsletter.name}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">每个工作日精选播客，双周一封长信。</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">累计 1780 期每日播客推荐，累计 150 篇长文（周更）。</p>
                   <p className="mt-4 text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
                   <h3 className="mt-2 text-base font-medium text-ink">{featuredIssue.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] overflow-hidden">
