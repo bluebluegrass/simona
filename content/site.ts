@@ -221,7 +221,7 @@ export const siteData: SiteData = {
   lifeInMotion: {
     title_cn: "流动的人生",
     title_en: "A life in motion",
-    intro_cn: "这些年我一直在移动。\n不是为了看起来勇敢，而是一次次把自己放回真实生活里，重新选择要怎么活。",
+    intro_cn: "这些年我一直在移动。\n我决定活在社会时钟之外。",
     stops: [
       {
         id: "usa",
