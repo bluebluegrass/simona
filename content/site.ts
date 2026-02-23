@@ -50,6 +50,20 @@ type SiteData = {
       href: string;
     }>;
   };
+  trustStrip: {
+    title: string;
+    items: string[];
+  };
+  workIndex: {
+    title: string;
+    intro: string;
+    items: Array<{
+      name: string;
+      summary: string;
+      href: string;
+      ctaLabel: string;
+    }>;
+  };
   lifeInMotion: {
     title_cn: string;
     title_en: string;
@@ -214,7 +228,54 @@ export const siteData: SiteData = {
       { label: "迁移与重建", href: "/talk" },
       { label: "写作与成书", href: "/book" },
       { label: "项目实验", href: "/projects" },
-      { label: "全部播客", href: "/podcasts" },
+      { label: "全部作品", href: "/work" },
+    ],
+  },
+
+  trustStrip: {
+    title: "为什么可以和我聊",
+    items: [
+      "前 Meta 数据工程师，做过完整的数据与内容系统工作。",
+      "在美国生活 8 年，后来主动放弃绿卡，重选人生路径。",
+      "跨新加坡、日本、阿姆斯特丹重建生活与工作节奏。",
+      "长期创作：7 年播客推荐 + 双周 Newsletter 长信。",
+    ],
+  },
+
+  workIndex: {
+    title: "作品索引",
+    intro: "如果你想快速了解我做过什么，可以从下面这些入口直接进入。",
+    items: [
+      {
+        name: "The Pod Luck Club",
+        summary: "每天一档播客推荐，双周一封长信。",
+        href: "/newsletter",
+        ctaLabel: "去看 Newsletter",
+      },
+      {
+        name: "《噢妈妈》",
+        summary: "讲述中国女性真实故事的播客项目。",
+        href: "/podcasts",
+        ctaLabel: "去听播客",
+      },
+      {
+        name: "《我为什么（不）想成为妈妈》",
+        summary: "基于播客访谈整理成的纪实文稿。",
+        href: "/book",
+        ctaLabel: "去看这本书",
+      },
+      {
+        name: "WomenOverseas 她乡",
+        summary: "海外华人女性与 non-binary 社区共创项目。",
+        href: "/projects",
+        ctaLabel: "去看项目",
+      },
+      {
+        name: "1:1 Coffee Chat",
+        summary: "面向迁移、转折、创作重建阶段的对话支持。",
+        href: "/talk",
+        ctaLabel: "预约对话",
+      },
     ],
   },
 
