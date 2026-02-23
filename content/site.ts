@@ -64,6 +64,28 @@ type SiteData = {
       ctaLabel: string;
     }>;
   };
+  about: {
+    title: string;
+    headline: string;
+    subtitle: string;
+    intro: string[];
+    quickFacts: string[];
+    journey: Array<{
+      period: string;
+      title: string;
+      description: string;
+    }>;
+    projects: Array<{
+      name: string;
+      summary: string;
+      href: string;
+      ctaLabel: string;
+    }>;
+    cta: {
+      newsletter: { label: string; href: string };
+      talk: { label: string; href: string };
+    };
+  };
   lifeInMotion: {
     title_cn: string;
     title_en: string;
@@ -226,6 +248,7 @@ export const siteData: SiteData = {
       { label: "播客推荐", href: "/newsletter" },
       { label: "女性叙事", href: "/podcasts" },
       { label: "迁移与重建", href: "/talk" },
+      { label: "关于我", href: "/about" },
       { label: "写作与成书", href: "/book" },
       { label: "项目实验", href: "/projects" },
       { label: "全部作品", href: "/work" },
@@ -277,6 +300,79 @@ export const siteData: SiteData = {
         ctaLabel: "预约对话",
       },
     ],
+  },
+
+  about: {
+    title: "关于我",
+    headline: "嘿，我是穿堂风 Simona",
+    subtitle: "前 Meta 数据工程师，播客与 Newsletter 创作者，目前常住阿姆斯特丹。",
+    intro: [
+      "过去这些年，我在不同城市之间移动，也在不同身份之间切换：学生、打工人、创作者、旅居者。",
+      "我现在做的事情很简单：持续创作，持续实验，持续把复杂的人生经验讲清楚，写下来，说出来。",
+    ],
+    quickFacts: [
+      "在美国生活 8 年，从学生成长为成年人，后来决定放弃绿卡。",
+      "累计 1780 期每日播客推荐，累计 150 篇周更长文。",
+      "跨新加坡、日本、阿姆斯特丹，持续重建生活与工作系统。",
+      "长期创作《噢妈妈》与 sàgó散讲，并将访谈整理为纪实文稿。",
+    ],
+    journey: [
+      {
+        period: "美国（8年）",
+        title: "从懵懂到独当一面",
+        description: "这是我学会成年的地方。也是我认真想清楚后，决定放弃绿卡的阶段。",
+      },
+      {
+        period: "新加坡（2年）",
+        title: "第一次把生活过出来",
+        description: "不再只有工作。那段时间我有了好朋友，也开始认真体验运动和生活本身。",
+      },
+      {
+        period: "全球旅居",
+        title: "背着 15 公斤，路过很多机场",
+        description: "那几年我学会放松，也学会浪费时间，重新理解什么是“对自己有用”的节奏。",
+      },
+      {
+        period: "日本",
+        title: "现实很硬，但人更清醒",
+        description: "文化隔阂、语言难度、工作突变，都逼着我更快面对真实世界和自己的选择。",
+      },
+      {
+        period: "阿姆斯特丹（现在）",
+        title: "再一次重建自己的人生",
+        description: "我决定活在社会时钟之外。诚实地过好当下的每一秒钟，体验人生。",
+      },
+    ],
+    projects: [
+      {
+        name: "The Pod Luck Club",
+        summary: "每天一档播客推荐，周更长文。是我长期做内容筛选与表达练习的地方。",
+        href: "/newsletter",
+        ctaLabel: "订阅 Newsletter",
+      },
+      {
+        name: "《噢妈妈》与 sàgó散讲",
+        summary: "一个讲女性真实故事，一个做更松弛的散讲电波。",
+        href: "/podcasts",
+        ctaLabel: "去听播客",
+      },
+      {
+        name: "《我为什么（不）想成为妈妈》",
+        summary: "基于播客访谈整理成的纪实文稿，继续把声音沉淀成文字。",
+        href: "/book",
+        ctaLabel: "去看这本书",
+      },
+      {
+        name: "1:1 Coffee Chat",
+        summary: "如果你正在迁移、转折或重建，我们可以聊一聊，理清下一步。",
+        href: "/talk",
+        ctaLabel: "预约一段对话",
+      },
+    ],
+    cta: {
+      newsletter: { label: "先从 Newsletter 开始", href: "/newsletter" },
+      talk: { label: "或者约我聊聊", href: "/talk" },
+    },
   },
 
   lifeInMotion: {
