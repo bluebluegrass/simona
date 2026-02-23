@@ -46,7 +46,7 @@ export default function HomePage() {
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <a
                   href={withBasePath("/newsletter")}
-                  className="rounded-full border border-podluck bg-podluck px-4 py-2 text-sm text-white transition-colors hover:bg-podluck-hover"
+                  className="btn-newsletter px-4 py-2"
                 >
                   订阅
                 </a>
@@ -107,7 +107,7 @@ export default function HomePage() {
                         href={isInternalHref(url) ? withBasePath(url) : url}
                         className="underline underline-offset-4"
                         target={url.startsWith("http") ? "_blank" : undefined}
-                        rel={url.startsWith("http") ? "noreferrer" : undefined}
+                        rel={url.startsWith("http") ? "noreferrer noopener" : undefined}
                       >
                         {platform}
                       </a>
@@ -135,7 +135,7 @@ export default function HomePage() {
               </div>
               <a
                 href={isInternalHref(featuredBook.url) ? withBasePath(featuredBook.url) : featuredBook.url}
-                className="mt-5 inline-block rounded-full border border-accent bg-accent px-4 py-2 text-sm text-white transition-colors hover:bg-accent-hover"
+                className="btn-primary mt-5 inline-block px-4 py-2"
                 target={featuredBook.url.startsWith("http") ? "_blank" : undefined}
                 rel={featuredBook.url.startsWith("http") ? "noreferrer noopener" : undefined}
               >
@@ -189,7 +189,7 @@ export default function HomePage() {
             </ul>
             <a
               href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl}
-              className="mt-4 inline-block rounded-full border border-accent bg-accent px-4 py-2 text-sm text-white transition-colors hover:bg-accent-hover"
+              className="btn-primary mt-4 inline-block px-4 py-2"
               target={talk.calendlyUrl.startsWith("http") ? "_blank" : undefined}
               rel={talk.calendlyUrl.startsWith("http") ? "noreferrer noopener" : undefined}
             >

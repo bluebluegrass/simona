@@ -23,7 +23,7 @@ export default function SubscribeForm() {
       />
       <button
         type="submit"
-        className="h-11 rounded-full border border-podluck bg-podluck px-5 text-sm text-white transition-colors hover:bg-podluck-hover"
+        className="btn-newsletter h-11 px-5"
       >
         {siteData.header.cta.label}
       </button>

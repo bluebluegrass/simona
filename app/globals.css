@@ -54,6 +54,20 @@ a:hover {
   outline-offset: 2px;
 }
 
+@layer components {
+  .btn-primary {
+    @apply rounded-full border border-accent bg-accent px-5 py-2.5 text-sm text-white transition-colors hover:bg-accent-hover focus-visible:outline-none;
+  }
+
+  .btn-newsletter {
+    @apply rounded-full border border-podluck bg-podluck px-5 py-2.5 text-sm text-white transition-colors hover:bg-podluck-hover focus-visible:outline-none;
+  }
+
+  .btn-secondary {
+    @apply rounded-full border border-border bg-card px-5 py-2.5 text-sm text-ink transition-colors hover:bg-surface focus-visible:outline-none;
+  }
+}
+
 h1,
 h2,
 h3 {

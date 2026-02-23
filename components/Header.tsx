@@ -45,7 +45,7 @@ export default function Header() {
 
           <Link
             href={siteData.header.cta.href}
-            className="rounded-full border border-podluck bg-podluck px-4 py-2 text-sm text-white transition-colors hover:bg-podluck-hover"
+            className="btn-newsletter px-4 py-2"
           >
             {siteData.header.cta.label}
           </Link>
@@ -91,7 +91,7 @@ export default function Header() {
               ))}
               <Link
                 href={siteData.header.cta.href}
-                className="mt-2 rounded-full border border-podluck bg-podluck px-4 py-2 text-center text-sm text-white transition-colors hover:bg-podluck-hover"
+                className="btn-newsletter mt-2 px-4 py-2 text-center"
                 onClick={() => setOpen(false)}
               >
                 {siteData.header.cta.label}

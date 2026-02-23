@@ -75,14 +75,11 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
             href={item.url}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-accent bg-accent px-5 py-2.5 text-sm text-white transition-colors hover:bg-accent-hover"
+            className="btn-primary"
           >
             去微信读书阅读
           </a>
-          <Link
-            href="/podcasts"
-            className="rounded-full border border-border bg-card px-5 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
-          >
+          <Link href="/podcasts" className="btn-secondary">
             听《噢妈妈》
           </Link>
         </div>

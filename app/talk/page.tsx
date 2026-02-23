@@ -40,7 +40,7 @@ export default function TalkPage() {
           </ul>
           <a
             href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl}
-            className="mt-5 inline-block rounded-full border border-accent bg-accent px-4 py-2 text-sm text-white transition-colors hover:bg-accent-hover"
+            className="btn-primary mt-5 inline-block px-4 py-2"
             target={talk.calendlyUrl.startsWith("http") ? "_blank" : undefined}
             rel={talk.calendlyUrl.startsWith("http") ? "noreferrer noopener" : undefined}
           >

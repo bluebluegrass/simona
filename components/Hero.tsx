@@ -26,16 +26,10 @@ export default function Hero() {
           </div>
         </div>
         <div className="mt-12 flex flex-wrap gap-3">
-          <Link
-            href={hero.primaryCta.href}
-            className="rounded-full border border-podluck bg-podluck px-5 py-2.5 text-sm text-white transition-colors hover:bg-podluck-hover"
-          >
+          <Link href={hero.primaryCta.href} className="btn-newsletter">
             {hero.primaryCta.label}
           </Link>
-          <Link
-            href={hero.secondaryCta.href}
-            className="rounded-full border border-border bg-card px-5 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
-          >
+          <Link href={hero.secondaryCta.href} className="btn-secondary">
             {hero.secondaryCta.label}
           </Link>
         </div>
