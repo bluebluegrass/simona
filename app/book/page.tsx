@@ -13,7 +13,7 @@ export default function BookPage() {
 
   return (
     <Section title={book.title} intro={book.why}>
-      <p className="mb-4 font-mono text-xs tracking-[0.14em] text-neutral-500">{book.relationshipNote}</p>
+      <p className="mb-4 font-mono text-xs tracking-[0.14em] text-muted">{book.relationshipNote}</p>
       {featured ? (
         <BookShowcase
           coverImage={book.coverImage}

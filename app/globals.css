@@ -13,12 +13,6 @@
   --color-accent: #e9781c;
   --color-accent-hover: #d66a14;
   --color-accent-soft: #fff2e8;
-  --bg: 248 248 247;
-  --bg-soft: 243 243 241;
-  --ink: 26 26 24;
-  --muted: 108 108 102;
-  --line: 214 214 208;
-  --card: 252 252 251;
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", serif;
   --font-body: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
@@ -35,8 +29,8 @@ body {
   background:
     radial-gradient(circle at 12% -10%, rgba(0, 0, 0, 0.04), transparent 30%),
     radial-gradient(circle at 90% 0%, rgba(0, 0, 0, 0.03), transparent 22%),
-    linear-gradient(to bottom, rgb(var(--bg)), rgb(var(--bg-soft)));
-  color: rgb(var(--ink));
+    linear-gradient(to bottom, var(--color-bg), var(--color-surface));
+  color: var(--color-ink);
   font-family: var(--font-body);
   line-height: 1.6;
   letter-spacing: 0.01em;

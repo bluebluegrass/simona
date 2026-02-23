@@ -21,27 +21,27 @@ export default function NewsletterPage() {
   return (
     <Section title={newsletter.title} intro={newsletter.valueProp}>
       <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-5 rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] p-6">
+        <div className="space-y-5 rounded-2xl border border-border bg-surface p-6">
           <h2 className="text-xl font-medium tracking-tight">{newsletter.name}</h2>
-          <div className="overflow-hidden rounded-xl">
+          <div className="overflow-hidden rounded-xl border border-border bg-card">
             <GhostSignupEmbed />
           </div>
-          <p className="text-center text-xs tracking-[0.08em] text-neutral-500">或跳转订阅页</p>
+          <p className="text-center text-xs tracking-[0.08em] text-muted">或跳转订阅页</p>
           <SubscribeForm />
-          <p className="text-sm text-neutral-500">{newsletter.formHint}</p>
+          <p className="text-sm text-muted">{newsletter.formHint}</p>
         </div>
 
         <div className="grid gap-3">
           {newsletter.recentIssues.map((issue) => (
-            <article key={issue.title} className="rounded-2xl border border-neutral-200 p-5 transition-shadow hover:shadow-sm">
-              <p className="text-xs text-neutral-500">{toDateLabel(issue.date)}</p>
+            <article key={issue.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+              <p className="text-xs text-muted">{toDateLabel(issue.date)}</p>
               <h3 className="mt-2 text-base font-medium">{issue.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">{issue.summary}</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>
               <a
                 href={isInternalHref(issue.url) ? withBasePath(issue.url) : issue.url}
                 className="mt-3 inline-block text-sm underline underline-offset-4"
                 target={issue.url.startsWith("http") ? "_blank" : undefined}
-                rel={issue.url.startsWith("http") ? "noreferrer" : undefined}
+                rel={issue.url.startsWith("http") ? "noreferrer noopener" : undefined}
               >
                 {newsletter.title}
               </a>

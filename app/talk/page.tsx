@@ -13,36 +13,36 @@ export default function TalkPage() {
   return (
     <Section title={talk.title} intro={talk.intro}>
       <div className="grid gap-5 md:grid-cols-3">
-        <article className="rounded-2xl border border-neutral-200 p-5">
+        <article className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-base font-medium tracking-tight">这次聊天适合你，如果…</h3>
-          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.goodFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </article>
 
-        <article className="rounded-2xl border border-neutral-200 p-5">
+        <article className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-base font-medium tracking-tight">这次聊天不太适合，如果…</h3>
-          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.notFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </article>
 
-        <article className="rounded-2xl border border-neutral-200 p-5">
+        <article className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-base font-medium tracking-tight">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
-          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-neutral-600">
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.logistics.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
           <a
             href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl}
-            className="mt-5 inline-block rounded-full border border-neutral-900 px-4 py-2 text-sm"
+            className="mt-5 inline-block rounded-full border border-accent bg-accent px-4 py-2 text-sm text-white transition-colors hover:bg-accent-hover"
             target={talk.calendlyUrl.startsWith("http") ? "_blank" : undefined}
-            rel={talk.calendlyUrl.startsWith("http") ? "noreferrer" : undefined}
+            rel={talk.calendlyUrl.startsWith("http") ? "noreferrer noopener" : undefined}
           >
             {talk.cta.label}
           </a>

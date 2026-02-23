@@ -32,9 +32,9 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
   const showImage = Boolean(imageSrc) && !hasImageError;
 
   return (
-    <article className="grid gap-8 rounded-2xl border border-neutral-200 bg-[rgba(255,255,255,0.86)] p-6 md:grid-cols-[280px_1fr] md:gap-10 md:p-8">
+    <article className="grid gap-8 rounded-2xl border border-border bg-card p-6 md:grid-cols-[280px_1fr] md:gap-10 md:p-8">
       <div className="mx-auto w-full max-w-[280px]">
-        <div className="aspect-[3/4] overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100">
+        <div className="aspect-[3/4] overflow-hidden rounded-xl border border-border bg-surface">
           {showImage ? (
             <img
               src={imageSrc}
@@ -43,7 +43,7 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
               onError={() => setHasImageError(true)}
             />
           ) : (
-            <div className="flex h-full items-center justify-center px-6 text-center text-sm leading-relaxed text-neutral-500">
+            <div className="flex h-full items-center justify-center px-6 text-center text-sm leading-relaxed text-muted">
               {fallbackTitle}
             </div>
           )}
@@ -51,20 +51,20 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
       </div>
 
       <div>
-        <h2 className="text-2xl font-medium tracking-tight text-neutral-900 md:text-3xl">{item.title}</h2>
-        <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">{item.subtitle}</p>
+        <h2 className="text-2xl font-medium tracking-tight text-ink md:text-3xl">{item.title}</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{item.subtitle}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">{item.publishDate}</span>
-          <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">{formatWordCount(item.wordCount)}</span>
-          <span className="rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-600">{item.category}</span>
+          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{item.publishDate}</span>
+          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{formatWordCount(item.wordCount)}</span>
+          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{item.category}</span>
         </div>
 
-        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-neutral-700 md:text-base">{description}</p>
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{description}</p>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {item.topics.map((topic) => (
-            <span key={topic} className="rounded-full border border-neutral-200 bg-[rgba(248,248,247,0.85)] px-3 py-1 text-xs text-neutral-600">
+            <span key={topic} className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">
               {topic}
             </span>
           ))}
@@ -75,13 +75,13 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
             href={item.url}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-neutral-900 bg-neutral-900 px-5 py-2.5 text-sm text-white transition-colors hover:bg-neutral-800"
+            className="rounded-full border border-accent bg-accent px-5 py-2.5 text-sm text-white transition-colors hover:bg-accent-hover"
           >
             去微信读书阅读
           </a>
           <Link
             href="/podcasts"
-            className="rounded-full border border-neutral-300 bg-white px-5 py-2.5 text-sm text-neutral-800 transition-colors hover:bg-neutral-100"
+            className="rounded-full border border-border bg-card px-5 py-2.5 text-sm text-ink transition-colors hover:bg-surface"
           >
             听《噢妈妈》
           </Link>

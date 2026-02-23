@@ -19,7 +19,7 @@ export default function GhostSignupEmbed() {
 
     script.setAttribute("data-background-color", "#FCFCFB");
     script.setAttribute("data-text-color", "#141413");
-    script.setAttribute("data-button-color", "#141413");
+    script.setAttribute("data-button-color", "#E9781C");
     script.setAttribute("data-button-text-color", "#FFFFFF");
     script.setAttribute("data-title", "The Pod Luck Club｜播客推荐 Newsletter");
     script.setAttribute(

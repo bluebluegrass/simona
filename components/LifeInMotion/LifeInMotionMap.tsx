@@ -21,9 +21,9 @@ export default function LifeInMotionMap({ stops, activeStopId, setActiveStopId }
     .join(" ");
 
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-[rgba(250,250,248,0.92)] p-4 md:p-6">
+    <div className="rounded-2xl border border-border bg-surface p-4 md:p-6">
       <svg viewBox="0 0 100 70" className="h-auto w-full" role="img" aria-label={siteData.lifeInMotion.title_en}>
-        <polyline points={fullPoints} fill="none" stroke="currentColor" strokeWidth="1.4" className="text-neutral-300" />
+        <polyline points={fullPoints} fill="none" stroke="currentColor" strokeWidth="1.4" className="text-border" />
         <polyline
           points={activePoints}
           fill="none"
@@ -31,7 +31,7 @@ export default function LifeInMotionMap({ stops, activeStopId, setActiveStopId }
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-neutral-700"
+          className="text-accent"
         />
         {stops.map((stop) => {
           const isActive = stop.id === activeStopId;
@@ -41,7 +41,7 @@ export default function LifeInMotionMap({ stops, activeStopId, setActiveStopId }
               cx={stop.x}
               cy={stop.y}
               r={isActive ? 4 : 2.5}
-              className={isActive ? "fill-neutral-900" : "fill-neutral-500"}
+              className={isActive ? "fill-accent" : "fill-muted"}
               style={{ opacity: isActive ? 1 : 0.35, cursor: "pointer" }}
               onMouseEnter={() => setActiveStopId(stop.id)}
               onClick={() => setActiveStopId(stop.id)}

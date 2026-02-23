@@ -21,11 +21,11 @@ export default function Card({ title, description, imageSrc, imageAlt, children,
   return (
     <article
       className={cx(
-        "overflow-hidden rounded-2xl border border-neutral-200 bg-[rgba(252,252,251,0.9)] transition duration-300 hover:-translate-y-0.5 hover:shadow-sm",
+        "overflow-hidden rounded-2xl border border-border bg-card transition duration-300 hover:-translate-y-0.5 hover:shadow-sm",
         className,
       )}
     >
-      <div className="aspect-[16/10] w-full border-b border-neutral-200 bg-neutral-100">
+      <div className="aspect-[16/10] w-full border-b border-border bg-surface">
         {showImage ? (
           <img
             src={src}
@@ -34,12 +34,12 @@ export default function Card({ title, description, imageSrc, imageAlt, children,
             onError={() => setHasImageError(true)}
           />
         ) : (
-          <div className="flex h-full items-center justify-center px-6 text-center text-sm text-neutral-500">{title}</div>
+          <div className="flex h-full items-center justify-center px-6 text-center text-sm text-muted">{title}</div>
         )}
       </div>
       <div className="space-y-3 p-6">
-        {title ? <h3 className="text-lg font-medium tracking-tight">{title}</h3> : null}
-        {description ? <p className="leading-relaxed text-neutral-600">{description}</p> : null}
+        {title ? <h3 className="text-lg font-medium tracking-tight text-ink">{title}</h3> : null}
+        {description ? <p className="leading-relaxed text-muted">{description}</p> : null}
         {children}
       </div>
     </article>

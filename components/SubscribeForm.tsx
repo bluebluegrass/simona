@@ -19,9 +19,12 @@ export default function SubscribeForm() {
         value={value}
         onChange={(event) => setValue(event.target.value)}
         placeholder={siteData.newsletter.name}
-        className="h-11 flex-1 rounded-full border border-neutral-300 bg-white px-4 text-sm outline-none transition focus:border-neutral-500"
+        className="h-11 flex-1 rounded-full border border-border bg-card px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-accent focus:ring-2 focus:ring-accent-soft"
       />
-      <button type="submit" className="h-11 rounded-full border border-neutral-900 bg-neutral-900 px-5 text-sm text-white">
+      <button
+        type="submit"
+        className="h-11 rounded-full border border-accent bg-accent px-5 text-sm text-white transition-colors hover:bg-accent-hover"
+      >
         {siteData.header.cta.label}
       </button>
     </form>

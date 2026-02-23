@@ -32,7 +32,7 @@ export default function PodcastsPage() {
                   <a
                     key={key}
                     href={isInternalHref(url) ? withBasePath(url) : url}
-                    className="rounded-full border border-neutral-300 px-3 py-1 text-xs text-neutral-700 transition-colors hover:bg-neutral-100"
+                    className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted transition-colors hover:bg-card hover:text-ink"
                     target={url.startsWith("http") ? "_blank" : undefined}
                     rel={url.startsWith("http") ? "noreferrer noopener" : undefined}
                   >
@@ -41,8 +41,8 @@ export default function PodcastsPage() {
                   );
                 })}
               </div>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-neutral-600">
-                <span className="text-neutral-500">从这里开始</span>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-muted">
+                <span className="text-muted">从这里开始</span>
                 {podcast.startHere.slice(0, 3).map((item) => (
                   <a
                     key={item.title}
