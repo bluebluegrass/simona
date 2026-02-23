@@ -18,51 +18,43 @@ function toDateLabel(value: string) {
 }
 
 export default function HomePage() {
-  const { podcastsHosted, newsletter, book, projects, talk, socials } = siteData;
+  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub } = siteData;
   const featuredBook = book.items[0];
-  const featuredIssue = newsletter.recentIssues[0];
+  const toneToClassName: Record<(typeof helpHub.items)[number]["tone"], string> = {
+    newsletter: "btn-newsletter",
+    primary: "btn-primary",
+    secondary: "btn-secondary",
+  };
 
   return (
     <>
       <Hero />
-      {featuredIssue ? (
-        <section className="pb-6 md:pb-10">
-          <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="rounded-2xl border border-border bg-surface p-5 md:p-6">
-              <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Newsletter</p>
-              <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{newsletter.name}</h2>
-              <p className="mt-2 text-sm text-muted">每个工作日精选播客｜双周 3000 字长信</p>
+      <section className="pb-8 md:pb-12">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <article className="rounded-3xl border border-border bg-surface p-6 md:p-8">
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">How I Can Help</p>
+            <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{helpHub.title}</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
-              <div className="mt-4 border-t border-border pt-4">
-                <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
-                <h3 className="mt-2 text-base font-medium text-ink [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:1] overflow-hidden">
-                  {featuredIssue.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] overflow-hidden">
-                  {featuredIssue.summary}
-                </p>
-              </div>
-
-              <div className="mt-5 flex flex-wrap items-center gap-3">
-                <a
-                  href={withBasePath("/newsletter")}
-                  className="btn-newsletter px-4 py-2"
-                >
-                  订阅
-                </a>
-                <a
-                  href={isInternalHref(featuredIssue.url) ? withBasePath(featuredIssue.url) : featuredIssue.url}
-                  className="text-sm underline underline-offset-4"
-                  target={featuredIssue.url.startsWith("http") ? "_blank" : undefined}
-                  rel={featuredIssue.url.startsWith("http") ? "noreferrer noopener" : undefined}
-                >
-                  读最近一期
-                </a>
-              </div>
-            </article>
-          </div>
-        </section>
-      ) : null}
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {helpHub.items.map((item) => (
+                <article key={item.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+                  <h3 className="text-base font-medium tracking-tight text-ink">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+                  <a
+                    href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
+                    className={`${toneToClassName[item.tone]} mt-4 inline-block px-4 py-2`}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
+                  >
+                    {item.ctaLabel}
+                  </a>
+                </article>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
       <LifeInMotion />
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">

@@ -31,6 +31,17 @@ type SiteData = {
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
   };
+  helpHub: {
+    title: string;
+    intro: string;
+    items: Array<{
+      title: string;
+      description: string;
+      href: string;
+      ctaLabel: string;
+      tone: "newsletter" | "primary" | "secondary";
+    }>;
+  };
   lifeInMotion: {
     title_cn: string;
     title_en: string;
@@ -156,6 +167,34 @@ export const siteData: SiteData = {
     proofBadges: ["7年播客推荐", "每日1集精选", "双周3000字长信"],
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
+  },
+
+  helpHub: {
+    title: "我可以怎么帮你？",
+    intro: "如果你是第一次来，可以从这里开始。都是我自己长期在做、也最常被问到的三件事。",
+    items: [
+      {
+        title: "每天一集播客推荐",
+        description: "The Pod Luck Club：每天推荐一期我喜欢的播客，双周一封 3000 字长信。",
+        href: "/newsletter",
+        ctaLabel: "订阅 Newsletter",
+        tone: "newsletter",
+      },
+      {
+        title: "听《噢妈妈》与 sàgó散讲",
+        description: "一个讲女性真实故事，一个在公园长椅上散讲，适合不同状态下的你。",
+        href: "/podcasts",
+        ctaLabel: "从这里开始听",
+        tone: "secondary",
+      },
+      {
+        title: "和我 1:1 聊聊",
+        description: "如果你正在迁移、转折或重建，我们可以用一杯咖啡的时间把下一步理清。",
+        href: "/talk",
+        ctaLabel: "预约一段对话",
+        tone: "primary",
+      },
+    ],
   },
 
   lifeInMotion: {
