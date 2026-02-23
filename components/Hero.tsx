@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="mt-12 flex flex-wrap gap-3">
           <Link
             href={hero.primaryCta.href}
-            className="rounded-full border border-accent bg-accent px-5 py-2.5 text-sm text-white transition-colors hover:bg-accent-hover"
+            className="rounded-full border border-podluck bg-podluck px-5 py-2.5 text-sm text-white transition-colors hover:bg-podluck-hover"
           >
             {hero.primaryCta.label}
           </Link>

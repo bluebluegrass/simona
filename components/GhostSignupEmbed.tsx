@@ -17,8 +17,8 @@ export default function GhostSignupEmbed() {
     script.async = true;
     script.src = "https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js";
 
-    script.setAttribute("data-background-color", "#FCFCFB");
-    script.setAttribute("data-text-color", "#141413");
+    script.setAttribute("data-background-color", "#F9F4EF");
+    script.setAttribute("data-text-color", "#1D1A18");
     script.setAttribute("data-button-color", "#E9781C");
     script.setAttribute("data-button-text-color", "#FFFFFF");
     script.setAttribute("data-title", "The Pod Luck Club｜播客推荐 Newsletter");

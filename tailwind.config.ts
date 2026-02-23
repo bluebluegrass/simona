@@ -18,6 +18,8 @@ const config: Config = {
         accent: "var(--color-accent)",
         "accent-hover": "var(--color-accent-hover)",
         "accent-soft": "var(--color-accent-soft)",
+        podluck: "var(--color-podluck)",
+        "podluck-hover": "var(--color-podluck-hover)",
       },
     },
   },

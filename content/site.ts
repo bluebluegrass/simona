@@ -133,7 +133,7 @@ export const siteData: SiteData = {
     siteName: "穿堂风Simona",
     baseTitle: "穿堂风Simona | 流动的人生",
     baseDescription:
-      "我是穿堂风Simona，前 Meta 数据工程师，长期播客推荐与 Newsletter 写作者，目前常住阿姆斯特丹。",
+      "很开心在这里遇见你。我是穿堂风Simona，前 Meta 数据工程师，2022 年后开始数字游民生活，目前常住阿姆斯特丹。",
   },
 
   header: {
@@ -149,11 +149,11 @@ export const siteData: SiteData = {
 
   hero: {
     titleLines: [
-      "在流动里练习稳定，",
-      "在讲述里重新认识自己。",
+      "很开心在这里遇见你，",
+      "我是穿堂风 Simona。",
     ],
-    subtitle: "前 Meta 数据工程师；2022 年后开启数字游民生活，现常住阿姆斯特丹。",
-    proofBadges: ["7年播客推荐", "每日1集", "双周长信"],
+    subtitle: "前 Meta 数据工程师。2022 年被裁员后开启数字游民生活，现在常住阿姆斯特丹。",
+    proofBadges: ["7年播客推荐", "每日1集精选", "双周3000字长信"],
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
   },
@@ -218,7 +218,7 @@ export const siteData: SiteData = {
 
   podcastsHosted: {
     title: "我主持的播客",
-    intro: "这是我把想法说出来的地方：更慢、更真诚，也更接近当下。",
+    intro: "这是我把想法说出来的地方：讲女性的真实故事，也讲在公园长椅上的散讲电波。",
     items: [
       {
         id: "ohmama",
@@ -347,7 +347,7 @@ export const siteData: SiteData = {
   talk: {
     title: "和我聊聊",
     intro:
-      "如果你也在迁移、转折或重建的路上，我们可以来一场 1:1 coffee chat。结合我的数字游民与跨国生活经验，聊聊你当下最具体的困惑。",
+      "如果你也在迁移、转折或重建的路上，欢迎来一场 1:1 coffee chat。我们不找标准答案，只把你当下最难的一团线，慢慢理成下一步。",
     calendlyUrl: "https://buymeacoffee.com/simonana/e/336214",
     whoItsFor: [
       "正在考虑数字游民/海外生活的人",
