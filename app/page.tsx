@@ -18,7 +18,7 @@ function toDateLabel(value: string) {
 }
 
 export default function HomePage() {
-  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub } = siteData;
+  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore } = siteData;
   const featuredBook = book.items[0];
   const toneToClassName: Record<(typeof helpHub.items)[number]["tone"], string> = {
     newsletter: "btn-newsletter",
@@ -55,6 +55,28 @@ export default function HomePage() {
           </article>
         </div>
       </section>
+
+      <section className="pb-8 md:pb-12">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <article className="rounded-3xl border border-border bg-card p-6 md:p-8">
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Browse By Topic</p>
+            <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{homeExplore.title}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{homeExplore.intro}</p>
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {homeExplore.items.map((item) => (
+                <a
+                  key={`${item.label}-${item.href}`}
+                  href={withBasePath(item.href)}
+                  className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+
       <LifeInMotion />
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">

@@ -42,6 +42,14 @@ type SiteData = {
       tone: "newsletter" | "primary" | "secondary";
     }>;
   };
+  homeExplore: {
+    title: string;
+    intro: string;
+    items: Array<{
+      label: string;
+      href: string;
+    }>;
+  };
   lifeInMotion: {
     title_cn: string;
     title_en: string;
@@ -194,6 +202,19 @@ export const siteData: SiteData = {
         ctaLabel: "预约一段对话",
         tone: "primary",
       },
+    ],
+  },
+
+  homeExplore: {
+    title: "你也可以按主题开始",
+    intro: "不确定先看什么？选一个你当下最关心的入口。",
+    items: [
+      { label: "播客推荐", href: "/newsletter" },
+      { label: "女性叙事", href: "/podcasts" },
+      { label: "迁移与重建", href: "/talk" },
+      { label: "写作与成书", href: "/book" },
+      { label: "项目实验", href: "/projects" },
+      { label: "全部播客", href: "/podcasts" },
     ],
   },
 
