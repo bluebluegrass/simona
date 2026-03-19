@@ -23,7 +23,7 @@ function toDateLabel(value: string) {
 }
 
 export default function HomePage() {
-  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore, workIndex } = siteData;
+  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore } = siteData;
   const featuredBook = book.items[0];
   const featuredIssue = newsletter.recentIssues[0];
   const recentIssues = newsletter.recentIssues.slice(0, 2);
@@ -180,18 +180,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={workIndex.title} intro={workIndex.intro} kicker="07 / ALL WORK">
-        <EditorialList
-          items={workIndex.items.map((item) => ({
-            title: item.name,
-            description: item.summary,
-            href: item.href,
-            ctaLabel: item.ctaLabel,
-          }))}
-        />
-      </Section>
-
-      <Section title={socials.title} kicker="08 / ELSEWHERE">
+      <Section title={socials.title} kicker="07 / ELSEWHERE">
         <div className="grid gap-3 md:grid-cols-2">
           {socials.items.map((item) => (
             <a
