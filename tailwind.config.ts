@@ -20,6 +20,7 @@ const config: Config = {
         "accent-soft": "var(--color-accent-soft)",
         podluck: "var(--color-podluck)",
         "podluck-hover": "var(--color-podluck-hover)",
+        "podluck-soft": "var(--color-podluck-soft)",
       },
     },
   },

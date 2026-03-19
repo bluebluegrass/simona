@@ -32,14 +32,14 @@ export default function HomePage() {
       <Hero />
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-surface p-6 md:p-8">
+          <article className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">How I Can Help</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{helpHub.title}</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {helpHub.items.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+                <article key={item.title} className="rounded-2xl border border-border bg-accent-soft p-5 transition-shadow hover:shadow-sm">
                   <h3 className="text-base font-medium tracking-tight text-ink">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
                   <a
@@ -60,7 +60,7 @@ export default function HomePage() {
       {featuredIssue ? (
         <section className="pb-8 md:pb-12">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="rounded-3xl border border-border bg-card p-6 md:p-8">
+            <article className="rounded-3xl border border-border bg-podluck-soft p-6 md:p-8 shadow-sm">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div className="max-w-3xl">
                   <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Newsletter Preview</p>
@@ -93,7 +93,7 @@ export default function HomePage() {
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-card p-6 md:p-8">
+          <article className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Browse By Topic</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{homeExplore.title}</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{homeExplore.intro}</p>
@@ -102,7 +102,7 @@ export default function HomePage() {
                 <a
                   key={`${item.label}-${item.href}`}
                   href={withBasePath(item.href)}
-                  className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
+                  className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-[background-color,transform] hover:-translate-y-0.5 hover:bg-accent-soft hover:text-ink hover:no-underline"
                 >
                   {item.label}
                 </a>
@@ -114,7 +114,7 @@ export default function HomePage() {
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-surface p-6 md:p-8">
+          <article className="rounded-3xl border border-border bg-surface p-6 md:p-8 shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Work Index</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{workIndex.title}</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{workIndex.intro}</p>
@@ -239,7 +239,7 @@ export default function HomePage() {
 
       <section className="pb-4 md:pb-6">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-2xl border border-border bg-surface p-5 md:p-6">
+          <article className="rounded-2xl border border-border bg-accent-soft p-5 md:p-6 shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Trust</p>
             <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{trustStrip.title}</h2>
             <ul className="mt-4 grid gap-3 md:grid-cols-2">

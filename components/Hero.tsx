@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <div className="max-w-4xl border-l border-border pl-5 md:pl-8">
+        <div className="max-w-4xl border-l border-podluck pl-5 md:pl-8">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-muted">{siteData.meta.siteName}</p>
           <h1 className="mt-5 max-w-3xl text-4xl font-medium tracking-tight text-ink md:text-6xl">
             {hero.titleLines.map((line) => (
@@ -19,7 +19,7 @@ export default function Hero() {
           <p className="mt-7 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{hero.subtitle}</p>
           <div className="mt-5 flex flex-wrap gap-2">
             {hero.proofBadges.map((badge) => (
-              <span key={badge} className="rounded-full border border-border bg-accent-soft px-3 py-1 text-xs text-muted">
+              <span key={badge} className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted shadow-sm">
                 {badge}
               </span>
             ))}

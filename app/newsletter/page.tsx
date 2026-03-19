@@ -21,9 +21,9 @@ export default function NewsletterPage() {
   return (
     <Section title={newsletter.title} intro={newsletter.valueProp}>
       <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-5 rounded-2xl border border-border bg-surface p-6">
+        <div className="space-y-5 rounded-2xl border border-border bg-podluck-soft p-6 shadow-sm">
           <h2 className="text-xl font-medium tracking-tight">{newsletter.name}</h2>
-          <div className="overflow-hidden rounded-xl border border-border bg-card">
+          <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
             <GhostSignupEmbed />
           </div>
           <p className="text-center text-xs tracking-[0.08em] text-muted">或跳转订阅页</p>
