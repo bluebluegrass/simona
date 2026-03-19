@@ -14,10 +14,10 @@ export default function AboutPage() {
     <>
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-surface p-6 md:p-9">
+          <article className="rounded-3xl border border-border bg-surface p-5 sm:p-6 md:p-9">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">About</p>
-            <h1 className="mt-3 text-3xl font-medium tracking-tight text-ink md:text-5xl">{about.headline}</h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">{about.subtitle}</p>
+            <h1 className="mt-3 max-w-4xl text-3xl font-medium tracking-tight text-ink md:text-5xl">{about.headline}</h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted sm:text-base">{about.subtitle}</p>
             <div className="mt-5 space-y-3">
               {about.intro.map((paragraph) => (
                 <p key={paragraph} className="max-w-3xl text-sm leading-relaxed text-muted md:text-base">
@@ -30,7 +30,7 @@ export default function AboutPage() {
       </section>
 
       <Section title="Quick Facts" kicker="01 / SNAPSHOT">
-        <ul className="grid gap-3 md:grid-cols-2">
+        <ul className="grid gap-3 lg:grid-cols-2">
           {about.quickFacts.map((fact) => (
             <li key={fact} className="rounded-2xl border border-border bg-card p-5 text-sm leading-relaxed text-muted">
               {fact}
@@ -52,7 +52,7 @@ export default function AboutPage() {
       </Section>
 
       <Section title="What I'm Building" kicker="03 / WORK">
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           {about.projects.map((project) => (
             <article key={project.name} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
               <h2 className="text-lg font-medium tracking-tight text-ink">{project.name}</h2>

@@ -37,13 +37,13 @@ export default function HomePage() {
                 <a
                   key={item.title}
                   href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                  className="group grid gap-2 py-5 no-underline transition-colors hover:no-underline md:grid-cols-[1.1fr_1.4fr_auto] md:items-center md:gap-6"
+                  className="group grid gap-2 py-5 no-underline transition-colors hover:no-underline lg:grid-cols-[1.05fr_1.45fr_auto] lg:items-center lg:gap-6"
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
                 >
                   <h3 className="text-base font-medium tracking-tight text-ink transition-colors group-hover:text-accent">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-muted">{item.description}</p>
-                  <span className="text-sm text-ink underline underline-offset-4">{item.ctaLabel}</span>
+                  <span className="pt-1 text-sm text-ink underline underline-offset-4 lg:pt-0">{item.ctaLabel}</span>
                 </a>
               ))}
             </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
         <section className="pb-8 md:pb-12">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
             <article className="border-t border-border pt-6 md:pt-8">
-              <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+              <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
                 <div>
                   <p className="editorial-kicker">Newsletter</p>
                   <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{newsletter.homepagePitch.title}</h2>
@@ -97,7 +97,7 @@ export default function HomePage() {
               <a
                 key={`${item.label}-${item.href}`}
                 href={withBasePath(item.href)}
-                className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
+                className="rounded-full border border-border bg-surface px-4 py-2.5 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
               >
                 {item.label}
               </a>
@@ -107,7 +107,7 @@ export default function HomePage() {
       </section>
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4 rounded-2xl border border-border bg-surface p-5">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Join The Journal</p>
             <h3 className="text-xl font-medium tracking-tight">{newsletter.name}</h3>
@@ -135,7 +135,7 @@ export default function HomePage() {
       </Section>
 
       <Section title="声音与文字" intro={podcastsHosted.intro} kicker="04 / PODCAST & BOOK">
-        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+        <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
           <div className="grid gap-6 md:grid-cols-2">
             {podcastsHosted.items.map((podcast) => (
               <Card key={podcast.id} title={podcast.title} description={podcast.description} imageSrc={podcast.coverImage} imageAlt={podcast.title}>
@@ -206,12 +206,12 @@ export default function HomePage() {
       <Section title={workIndex.title} intro={workIndex.intro} kicker="06 / ALL WORK">
         <div className="divide-y divide-border border-y border-border">
           {workIndex.items.map((item) => (
-            <article key={item.name} className="grid gap-2 py-5 md:grid-cols-[1fr_1.6fr_auto] md:items-center md:gap-6">
+            <article key={item.name} className="grid gap-2 py-5 lg:grid-cols-[1fr_1.6fr_auto] lg:items-center lg:gap-6">
               <h3 className="text-base font-medium tracking-tight text-ink">{item.name}</h3>
               <p className="text-sm leading-relaxed text-muted">{item.summary}</p>
               <a
                 href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                className="text-sm underline underline-offset-4"
+                className="pt-1 text-sm underline underline-offset-4 lg:pt-0"
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
               >
@@ -223,7 +223,7 @@ export default function HomePage() {
       </Section>
 
       <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3">
           <article className="rounded-2xl border border-border bg-card p-5">
             <h3 className="text-base font-medium tracking-tight">{talk.positioning.title}</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">{talk.positioning.description}</p>

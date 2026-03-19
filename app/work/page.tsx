@@ -13,7 +13,7 @@ export default function WorkPage() {
 
   return (
     <Section title={workIndex.title} intro={workIndex.intro}>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         {workIndex.items.map((item) => (
           <article key={item.name} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
             <h2 className="text-lg font-medium tracking-tight text-ink">{item.name}</h2>
@@ -30,7 +30,7 @@ export default function WorkPage() {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 lg:grid-cols-2">
         {podcastsHosted.items.map((podcast) => (
           <article key={podcast.id} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Podcast</p>
@@ -48,7 +48,7 @@ export default function WorkPage() {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 lg:grid-cols-2">
         <article className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
           <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Newsletter</p>
           <h2 className="mt-2 text-lg font-medium tracking-tight text-ink">{newsletter.name}</h2>
@@ -75,7 +75,7 @@ export default function WorkPage() {
         ) : null}
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 lg:grid-cols-2">
         {projects.items.map((project) => (
           <article key={project.name} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
             <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Project</p>

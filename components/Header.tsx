@@ -19,8 +19,8 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="text-base font-medium tracking-[0.06em] text-ink">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-4 md:px-8">
+        <Link href="/" className="min-w-0 text-sm font-medium tracking-[0.06em] text-ink sm:text-base">
           {siteData.meta.siteName}
         </Link>
 
@@ -56,7 +56,7 @@ export default function Header() {
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-label="打开导航"
-          className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border text-muted transition-transform duration-150 active:scale-95 md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-border text-muted transition-transform duration-150 active:scale-95 md:hidden"
         >
           <span className="text-lg leading-none">{open ? "×" : "≡"}</span>
         </button>

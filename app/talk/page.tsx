@@ -30,7 +30,7 @@ export default function TalkPage() {
         </ul>
       </article>
 
-      <div className="mb-6 grid gap-5 md:mb-8 md:grid-cols-2">
+      <div className="mb-6 grid gap-5 md:mb-8 lg:grid-cols-2">
         <article className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-base font-medium tracking-tight text-ink">聊完你会带走什么</h3>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
@@ -50,7 +50,7 @@ export default function TalkPage() {
         </article>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 lg:grid-cols-3">
         <article className="rounded-2xl border border-border bg-card p-5">
           <h3 className="text-base font-medium tracking-tight">这次聊天适合你，如果…</h3>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
@@ -78,7 +78,7 @@ export default function TalkPage() {
           </ul>
           <a
             href={isInternalHref(talk.calendlyUrl) ? withBasePath(talk.calendlyUrl) : talk.calendlyUrl}
-            className="btn-primary mt-5 inline-block px-4 py-2"
+            className="btn-primary mt-5 inline-flex min-h-11 items-center justify-center px-4 py-2"
             target={talk.calendlyUrl.startsWith("http") ? "_blank" : undefined}
             rel={talk.calendlyUrl.startsWith("http") ? "noreferrer noopener" : undefined}
           >

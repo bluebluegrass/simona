@@ -12,18 +12,18 @@ export default function SubscribeForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-3 sm:flex-row">
+    <form onSubmit={onSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center">
       <input
         type="email"
         required
         value={value}
         onChange={(event) => setValue(event.target.value)}
         placeholder={siteData.newsletter.name}
-        className="h-11 flex-1 rounded-full border border-border bg-card px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-podluck focus:ring-2 focus:ring-accent-soft"
+        className="h-11 min-w-0 flex-1 rounded-full border border-border bg-card px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-podluck focus:ring-2 focus:ring-accent-soft"
       />
       <button
         type="submit"
-        className="btn-newsletter h-11 px-5"
+        className="btn-newsletter h-11 px-5 sm:shrink-0"
       >
         {siteData.header.cta.label}
       </button>
