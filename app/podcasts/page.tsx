@@ -1,6 +1,7 @@
+import Section from "@/components/Section";
+import TagList from "@/components/TagList";
 import type { Metadata } from "next";
 import Card from "@/components/Card";
-import Section from "@/components/Section";
 import { siteData } from "@/content/site";
 import { isInternalHref, withBasePath } from "@/lib/basePath";
 
@@ -24,23 +25,15 @@ export default function PodcastsPage() {
       <div className="grid gap-6 md:grid-cols-2">
         {podcastsHosted.items.map((podcast) => (
           <Card key={podcast.id} title={podcast.title} description={podcast.description} imageSrc={podcast.coverImage} imageAlt={podcast.title}>
-              <div className="flex flex-wrap gap-2">
-                {platformOrder.map(({ key, label }) => {
-                  const url = podcast.platformLinks?.[key] ?? podcast.links[key];
-                  if (!url) return null;
-                  return (
-                  <a
-                    key={key}
-                    href={isInternalHref(url) ? withBasePath(url) : url}
-                    className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted transition-colors hover:bg-card hover:text-ink"
-                    target={url.startsWith("http") ? "_blank" : undefined}
-                    rel={url.startsWith("http") ? "noreferrer noopener" : undefined}
-                  >
-                    {label}
-                  </a>
-                  );
-                })}
-              </div>
+              <TagList
+                items={platformOrder
+                  .map(({ key, label }) => {
+                    const url = podcast.platformLinks?.[key] ?? podcast.links[key];
+                    if (!url) return null;
+                    return { label, href: isInternalHref(url) ? withBasePath(url) : url };
+                  })
+                  .filter(Boolean) as Array<{ label: string; href: string }>}
+              />
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-muted">
                 <span className="text-muted">从这里开始</span>
                 {podcast.startHere.slice(0, 3).map((item) => (

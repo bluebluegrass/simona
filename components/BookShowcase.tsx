@@ -1,6 +1,8 @@
 "use client";
 
+import Badge from "@/components/Badge";
 import Link from "next/link";
+import TagList from "@/components/TagList";
 import { useMemo, useState } from "react";
 import { withBasePath } from "@/lib/basePath";
 
@@ -55,19 +57,15 @@ export default function BookShowcase({ coverImage, fallbackTitle, description, i
         <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{item.subtitle}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{item.publishDate}</span>
-          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{formatWordCount(item.wordCount)}</span>
-          <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">{item.category}</span>
+          <Badge>{item.publishDate}</Badge>
+          <Badge>{formatWordCount(item.wordCount)}</Badge>
+          <Badge>{item.category}</Badge>
         </div>
 
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{description}</p>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {item.topics.map((topic) => (
-            <span key={topic} className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">
-              {topic}
-            </span>
-          ))}
+        <div className="mt-5">
+          <TagList items={item.topics} />
         </div>
 
         <div className="mt-7 flex flex-wrap gap-3">

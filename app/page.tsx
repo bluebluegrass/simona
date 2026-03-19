@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Badge from "@/components/Badge";
 import Card from "@/components/Card";
 import EditorialCard from "@/components/EditorialCard";
 import EditorialList from "@/components/EditorialList";
@@ -7,6 +8,7 @@ import Hero from "@/components/Hero";
 import LifeInMotion from "@/components/LifeInMotion/LifeInMotion";
 import Section from "@/components/Section";
 import SubscribeForm from "@/components/SubscribeForm";
+import TagList from "@/components/TagList";
 import { siteData } from "@/content/site";
 import { isInternalHref, withBasePath } from "@/lib/basePath";
 
@@ -80,17 +82,10 @@ export default function HomePage() {
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <div className="flex flex-wrap gap-2.5">
-            {homeExplore.items.map((item) => (
-              <a
-                key={`${item.label}-${item.href}`}
-                href={withBasePath(item.href)}
-                className="rounded-full border border-border bg-surface px-4 py-2.5 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+          <TagList
+            items={homeExplore.items.map((item) => ({ label: item.label, href: withBasePath(item.href) }))}
+            linkClassName="px-4 py-2.5 text-sm text-ink"
+          />
         </div>
       </section>
 
@@ -151,9 +146,9 @@ export default function HomePage() {
               description="根据《噢妈妈》的部分采访整理成文稿"
             >
               <div className="mt-4 flex flex-wrap gap-2">
-                <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">2025-02</span>
-                <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">168,311字</span>
-                <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">纪实</span>
+                <Badge>2025-02</Badge>
+                <Badge>168,311字</Badge>
+                <Badge>纪实</Badge>
               </div>
               <a
                 href={isInternalHref(featuredBook.url) ? withBasePath(featuredBook.url) : featuredBook.url}
