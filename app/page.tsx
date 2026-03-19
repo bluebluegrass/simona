@@ -20,6 +20,7 @@ function toDateLabel(value: string) {
 export default function HomePage() {
   const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore, trustStrip, workIndex } = siteData;
   const featuredBook = book.items[0];
+  const featuredIssue = newsletter.recentIssues[0];
   const toneToClassName: Record<(typeof helpHub.items)[number]["tone"], string> = {
     newsletter: "btn-newsletter",
     primary: "btn-primary",
@@ -57,6 +58,43 @@ export default function HomePage() {
       </section>
 
       <LifeInMotion />
+
+      {featuredIssue ? (
+        <section className="pb-8 md:pb-12">
+          <div className="mx-auto max-w-6xl px-5 md:px-8">
+            <article className="rounded-3xl border border-border bg-podluck-soft p-6 md:p-8 shadow-sm">
+              <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Newsletter</p>
+                  <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{newsletter.homepagePitch.title}</h2>
+                  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{newsletter.homepagePitch.description}</p>
+                  <p className="mt-4 text-sm text-ink">{newsletter.homepagePitch.proof}</p>
+                  <div className="mt-5 flex flex-wrap items-center gap-3">
+                    <a href={withBasePath("/newsletter")} className="btn-newsletter px-4 py-2">
+                      {newsletter.homepagePitch.ctaLabel}
+                    </a>
+                    <a
+                      href={isInternalHref(featuredIssue.url) ? withBasePath(featuredIssue.url) : featuredIssue.url}
+                      className="text-sm underline underline-offset-4"
+                      target={featuredIssue.url.startsWith("http") ? "_blank" : undefined}
+                      rel={featuredIssue.url.startsWith("http") ? "noreferrer noopener" : undefined}
+                    >
+                      {newsletter.homepagePitch.latestLabel}
+                    </a>
+                  </div>
+                </div>
+                <article className="rounded-2xl border border-border bg-card p-5">
+                  <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
+                  <h3 className="mt-2 text-base font-medium text-ink">{featuredIssue.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
+                    {featuredIssue.summary}
+                  </p>
+                </article>
+              </div>
+            </article>
+          </div>
+        </section>
+      ) : null}
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -207,6 +245,23 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="pb-4 md:pb-6">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <article className="rounded-2xl border border-border bg-card p-5 md:p-6 shadow-sm">
+            <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Conversation</p>
+            <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{talk.positioning.title}</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{talk.positioning.description}</p>
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              {talk.outcomes.map((item) => (
+                <div key={item} className="rounded-xl border border-border bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
+                  {item}
+                </div>
+              ))}
+            </div>
           </article>
         </div>
       </section>

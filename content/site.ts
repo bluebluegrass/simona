@@ -118,6 +118,13 @@ type SiteData = {
     title: string;
     name: string;
     valueProp: string;
+    homepagePitch: {
+      title: string;
+      description: string;
+      proof: string;
+      ctaLabel: string;
+      latestLabel: string;
+    };
     subscribeUrl: string;
     formHint: string;
     recentIssues: Array<{
@@ -162,6 +169,12 @@ type SiteData = {
     title: string;
     intro: string;
     calendlyUrl: string;
+    positioning: {
+      title: string;
+      description: string;
+    };
+    outcomes: string[];
+    process: string[];
     whoItsFor: string[];
     topics: string[];
     goodFor: string[];
@@ -489,6 +502,13 @@ export const siteData: SiteData = {
     name: "The Pod Luck Club",
     valueProp:
       "优质播客推荐计划。累计 1780 期每日播客推荐，累计 150 篇长文（周更），持续记录我在世界各地的生活、工作与重建。",
+    homepagePitch: {
+      title: "如果你想少刷一点信息流，把真正值得听的内容留下来",
+      description: "这是我长期在做的筛选工作。你不用每天自己在海量播客里找信号，我会先听、先选、先整理，再把值得留下的内容发给你。",
+      proof: "累计 1780 期每日播客推荐，累计 150 篇长文（周更）。",
+      ctaLabel: "订阅 Newsletter",
+      latestLabel: "读最近一期",
+    },
     subscribeUrl: "https://thepodluckclub.com/",
     formHint: "点击订阅后会跳转到 The Pod Luck Club 官方页面。",
     recentIssues: [
@@ -566,6 +586,20 @@ export const siteData: SiteData = {
     intro:
       "如果你也在迁移、转折或重建的路上，欢迎来一场 1:1 coffee chat。我们不找标准答案，只把你当下最难的一团线，慢慢理成下一步。",
     calendlyUrl: "https://buymeacoffee.com/simonana/e/336214",
+    positioning: {
+      title: "这不是咨询，也不是说教",
+      description: "更像一场有方向感的 conversation。你把现在最卡的地方带来，我们一起把问题讲清楚，把下一步理出来。",
+    },
+    outcomes: [
+      "把你现在真正卡住的问题讲清楚，而不是继续在脑子里打转。",
+      "整理出 1 到 3 个可以马上执行的下一步。",
+      "对迁移、创作或转折期的节奏感更清楚一点。",
+    ],
+    process: [
+      "你先带着一个真实问题来，不需要提前准备完整背景。",
+      "我们在线聊 30 分钟，从混乱里抓重点。",
+      "结束时带走更清楚的判断和下一步方向。",
+    ],
     whoItsFor: [
       "正在考虑数字游民/海外生活的人",
       "处在职业转折期、想理清下一步方向的人",

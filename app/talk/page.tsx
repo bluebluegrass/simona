@@ -12,6 +12,12 @@ export default function TalkPage() {
 
   return (
     <Section title={talk.title} intro={talk.intro}>
+      <article className="mb-6 rounded-2xl border border-border bg-card p-5 md:mb-8 md:p-6">
+        <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Conversation</p>
+        <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{talk.positioning.title}</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{talk.positioning.description}</p>
+      </article>
+
       <article className="mb-6 rounded-2xl border border-border bg-surface p-5 md:mb-8 md:p-6">
         <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Trust</p>
         <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{trustStrip.title}</h2>
@@ -23,6 +29,26 @@ export default function TalkPage() {
           ))}
         </ul>
       </article>
+
+      <div className="mb-6 grid gap-5 md:mb-8 md:grid-cols-2">
+        <article className="rounded-2xl border border-border bg-card p-5">
+          <h3 className="text-base font-medium tracking-tight text-ink">聊完你会带走什么</h3>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+            {talk.outcomes.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="rounded-2xl border border-border bg-card p-5">
+          <h3 className="text-base font-medium tracking-tight text-ink">这次对话怎么进行</h3>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+            {talk.process.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </div>
 
       <div className="grid gap-5 md:grid-cols-3">
         <article className="rounded-2xl border border-border bg-card p-5">
