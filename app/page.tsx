@@ -18,46 +18,33 @@ function toDateLabel(value: string) {
 }
 
 export default function HomePage() {
-  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore, trustStrip, workIndex } = siteData;
+  const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore, workIndex } = siteData;
   const featuredBook = book.items[0];
   const featuredIssue = newsletter.recentIssues[0];
-  const toneToClassName: Record<(typeof helpHub.items)[number]["tone"], string> = {
-    newsletter: "btn-newsletter",
-    primary: "btn-primary",
-    secondary: "btn-secondary",
-  };
 
   return (
     <>
       <Hero />
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="editorial-panel bg-card px-6 py-7 md:px-8 md:py-8">
-            <div
-              aria-hidden="true"
-              className="absolute right-6 top-6 h-10 w-10 rounded-full border border-accent/30 bg-accent-soft"
-            />
-            <p className="editorial-kicker relative z-10">Start Here</p>
+          <article className="border-t border-border pt-6 md:pt-8">
+            <p className="editorial-kicker">Start Here</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{helpHub.title}</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 divide-y divide-border border-y border-border">
               {helpHub.items.map((item) => (
-                <article
+                <a
                   key={item.title}
-                  className="rounded-[1.5rem] border border-border bg-accent-soft p-5 transition-[transform,box-shadow,background-color] hover:-translate-y-1 hover:shadow-md"
+                  href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
+                  className="group grid gap-2 py-5 no-underline transition-colors hover:no-underline md:grid-cols-[1.1fr_1.4fr_auto] md:items-center md:gap-6"
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
                 >
-                  <h3 className="text-base font-medium tracking-tight text-ink">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-                  <a
-                    href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                    className={`${toneToClassName[item.tone]} mt-4 inline-block px-4 py-2`}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
-                  >
-                    {item.ctaLabel}
-                  </a>
-                </article>
+                  <h3 className="text-base font-medium tracking-tight text-ink transition-colors group-hover:text-accent">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{item.description}</p>
+                  <span className="text-sm text-ink underline underline-offset-4">{item.ctaLabel}</span>
+                </a>
               ))}
             </div>
           </article>
@@ -69,7 +56,7 @@ export default function HomePage() {
       {featuredIssue ? (
         <section className="pb-8 md:pb-12">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="editorial-panel bg-podluck-soft px-6 py-7 md:px-8 md:py-8">
+            <article className="border-t border-border pt-6 md:pt-8">
               <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
                 <div>
                   <p className="editorial-kicker">Newsletter</p>
@@ -90,7 +77,7 @@ export default function HomePage() {
                     </a>
                   </div>
                 </div>
-                <article className="rounded-[1.5rem] border border-border bg-card p-5 shadow-sm">
+                <article className="rounded-2xl border border-border bg-card p-5">
                   <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
                   <h3 className="mt-2 text-base font-medium text-ink">{featuredIssue.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
@@ -105,22 +92,17 @@ export default function HomePage() {
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="editorial-panel bg-card px-6 py-7 md:px-8 md:py-8">
-            <p className="editorial-kicker">By Topic</p>
-            <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{homeExplore.title}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{homeExplore.intro}</p>
-            <div className="mt-5 flex flex-wrap gap-2.5">
-              {homeExplore.items.map((item) => (
-                <a
-                  key={`${item.label}-${item.href}`}
-                  href={withBasePath(item.href)}
-                  className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-[background-color,transform] hover:-translate-y-0.5 hover:bg-accent-soft hover:text-ink hover:no-underline"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </article>
+          <div className="flex flex-wrap gap-2.5">
+            {homeExplore.items.map((item) => (
+              <a
+                key={`${item.label}-${item.href}`}
+                href={withBasePath(item.href)}
+                className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-ink no-underline transition-colors hover:bg-card hover:text-ink hover:no-underline"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -221,15 +203,15 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={workIndex.title} intro={workIndex.intro} kicker="05 / ALL WORK">
-        <div className="grid gap-4 md:grid-cols-2">
+      <Section title={workIndex.title} intro={workIndex.intro} kicker="06 / ALL WORK">
+        <div className="divide-y divide-border border-y border-border">
           {workIndex.items.map((item) => (
-            <article key={item.name} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+            <article key={item.name} className="grid gap-2 py-5 md:grid-cols-[1fr_1.6fr_auto] md:items-center md:gap-6">
               <h3 className="text-base font-medium tracking-tight text-ink">{item.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{item.summary}</p>
+              <p className="text-sm leading-relaxed text-muted">{item.summary}</p>
               <a
                 href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                className="mt-4 inline-block text-sm underline underline-offset-4"
+                className="text-sm underline underline-offset-4"
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
               >
@@ -240,61 +222,24 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="pb-4 md:pb-6">
-        <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-2xl border border-border bg-accent-soft p-5 md:p-6 shadow-sm">
-            <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Trust</p>
-            <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{trustStrip.title}</h2>
-            <ul className="mt-4 grid gap-3 md:grid-cols-2">
-              {trustStrip.items.map((item) => (
-                <li key={item} className="rounded-xl border border-border bg-card px-4 py-3 text-sm leading-relaxed text-muted">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section className="pb-4 md:pb-6">
-        <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-2xl border border-border bg-card p-5 md:p-6 shadow-sm">
-            <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Conversation</p>
-            <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{talk.positioning.title}</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{talk.positioning.description}</p>
-            <div className="mt-5 grid gap-3 md:grid-cols-3">
-              {talk.outcomes.map((item) => (
-                <div key={item} className="rounded-xl border border-border bg-surface px-4 py-3 text-sm leading-relaxed text-muted">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <Section title={talk.title} intro={talk.intro} kicker="06 / TALK">
+      <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium">{talk.title}</h3>
+            <h3 className="text-base font-medium tracking-tight">{talk.positioning.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted">{talk.positioning.description}</p>
+          </article>
+          <article className="rounded-2xl border border-border bg-card p-5">
+            <h3 className="text-base font-medium tracking-tight">聊完你会带走什么</h3>
             <ul className="mt-3 space-y-2 text-sm text-muted">
-              {talk.whoItsFor.map((item) => (
+              {talk.outcomes.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
           <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium">{talk.cta.label}</h3>
+            <h3 className="text-base font-medium tracking-tight">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
             <ul className="mt-3 space-y-2 text-sm text-muted">
-              {talk.topics.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
-            <ul className="mt-3 space-y-2 text-sm text-muted">
-              {talk.logistics.map((item) => (
+              {talk.process.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -310,7 +255,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={socials.title} kicker="07 / ELSEWHERE">
+      <Section title={socials.title} kicker="08 / ELSEWHERE">
         <div className="grid gap-3 md:grid-cols-2">
           {socials.items.map((item) => (
             <a
