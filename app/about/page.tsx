@@ -1,3 +1,4 @@
+import FeaturePanel from "@/components/FeaturePanel";
 import type { Metadata } from "next";
 import EditorialCard from "@/components/EditorialCard";
 import Section from "@/components/Section";
@@ -30,7 +31,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Section title="Quick Facts" kicker="01 / SNAPSHOT">
+      <Section title="一些事实" kicker="01 / SNAPSHOT">
         <ul className="grid gap-3 lg:grid-cols-2">
           {about.quickFacts.map((fact) => (
             <li key={fact} className="rounded-2xl border border-border bg-card p-5 text-sm leading-relaxed text-muted">
@@ -40,7 +41,7 @@ export default function AboutPage() {
         </ul>
       </Section>
 
-      <Section title="Journey" kicker="02 / PATH">
+      <Section title="走到这里" kicker="02 / PATH">
         <ol className="grid gap-4">
           {about.journey.map((item) => (
             <li key={item.period} className="rounded-2xl border border-border bg-card p-5 md:p-6">
@@ -52,7 +53,7 @@ export default function AboutPage() {
         </ol>
       </Section>
 
-      <Section title="What I'm Building" kicker="03 / WORK">
+      <Section title="我现在在做什么" kicker="03 / WORK">
         <div className="grid gap-4 lg:grid-cols-2">
           {about.projects.map((project) => (
             <EditorialCard key={project.name} title={project.name} description={project.summary} href={project.href} ctaLabel={project.ctaLabel} />
@@ -60,12 +61,12 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section title="Start Here" kicker="04 / NEXT STEP">
-        <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
-          <p className="max-w-2xl text-sm leading-relaxed text-muted md:text-base">
-            如果你想先从内容认识我，可以从 Newsletter 开始；如果你正在经历迁移、转折或重建，也可以直接预约一段对话。
-          </p>
-          <div className="mt-5 flex flex-wrap gap-3">
+      <Section title="如果你想继续看" kicker="04 / NEXT STEP">
+        <FeaturePanel
+          title="可以先从内容开始，也可以直接来聊"
+          description="如果你想先通过文字和声音认识我，可以先订阅 Newsletter；如果你正在经历迁移、转折或重建，也可以直接预约一段对话。"
+        >
+          <div className="flex flex-wrap gap-3">
             <a href={withBasePath(about.cta.newsletter.href)} className="btn-newsletter">
               {about.cta.newsletter.label}
             </a>
@@ -73,7 +74,7 @@ export default function AboutPage() {
               {about.cta.talk.label}
             </a>
           </div>
-        </div>
+        </FeaturePanel>
       </Section>
     </>
   );

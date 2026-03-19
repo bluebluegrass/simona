@@ -19,13 +19,15 @@ function toDateLabel(value: string) {
 
 export default function NewsletterPage() {
   const { newsletter } = siteData;
+  const featuredIssue = newsletter.recentIssues[0];
 
   return (
     <Section title={newsletter.title} intro={newsletter.valueProp}>
-      <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
+      <div className="grid gap-8 lg:grid-cols-[1fr_1.05fr]">
         <FeaturePanel
           kicker="Join The Journal"
           title={newsletter.name}
+          description={newsletter.homepagePitch.proof}
           className="bg-podluck-soft shadow-sm"
           footer={<p className="text-sm text-muted">{newsletter.formHint}</p>}
         >
@@ -39,7 +41,27 @@ export default function NewsletterPage() {
         </FeaturePanel>
 
         <div className="grid gap-3">
-          {newsletter.recentIssues.map((issue) => (
+          {featuredIssue ? (
+            <FeaturePanel
+              kicker="从这里开始"
+              title={featuredIssue.title}
+              description={featuredIssue.summary}
+              className="bg-card"
+              footer={
+                <a
+                  href={isInternalHref(featuredIssue.url) ? withBasePath(featuredIssue.url) : featuredIssue.url}
+                  className="text-sm underline underline-offset-4"
+                  target={featuredIssue.url.startsWith("http") ? "_blank" : undefined}
+                  rel={featuredIssue.url.startsWith("http") ? "noreferrer noopener" : undefined}
+                >
+                  读最近一期
+                </a>
+              }
+            >
+              <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
+            </FeaturePanel>
+          ) : null}
+          {newsletter.recentIssues.slice(1).map((issue) => (
             <EditorialCard key={issue.title} title={issue.title} href={issue.url} ctaLabel={newsletter.title}>
               <p className="text-xs text-muted">{toDateLabel(issue.date)}</p>
               <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>

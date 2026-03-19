@@ -26,6 +26,7 @@ export default function HomePage() {
   const { podcastsHosted, newsletter, book, projects, talk, socials, helpHub, homeExplore, workIndex } = siteData;
   const featuredBook = book.items[0];
   const featuredIssue = newsletter.recentIssues[0];
+  const recentIssues = newsletter.recentIssues.slice(0, 2);
 
   return (
     <>
@@ -38,6 +39,12 @@ export default function HomePage() {
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
             <EditorialList items={helpHub.items} className="mt-8" />
+            <div className="mt-6">
+              <TagList
+                items={homeExplore.items.map((item) => ({ label: item.label, href: withBasePath(item.href) }))}
+                linkClassName="px-4 py-2.5 text-sm text-ink"
+              />
+            </div>
           </article>
         </div>
       </section>
@@ -45,69 +52,33 @@ export default function HomePage() {
       <LifeInMotion />
 
       {featuredIssue ? (
-        <section className="pb-8 md:pb-12">
-          <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="border-t border-border pt-6 md:pt-8">
-              <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-                <div>
-                  <p className="editorial-kicker">Newsletter</p>
-                  <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{newsletter.homepagePitch.title}</h2>
-                  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{newsletter.homepagePitch.description}</p>
-                  <p className="mt-4 text-sm text-ink">{newsletter.homepagePitch.proof}</p>
-                  <div className="mt-5 flex flex-wrap items-center gap-3">
-                    <a href={withBasePath("/newsletter")} className="btn-newsletter px-4 py-2">
-                      {newsletter.homepagePitch.ctaLabel}
-                    </a>
-                    <a
-                      href={isInternalHref(featuredIssue.url) ? withBasePath(featuredIssue.url) : featuredIssue.url}
-                      className="text-sm underline underline-offset-4"
-                      target={featuredIssue.url.startsWith("http") ? "_blank" : undefined}
-                      rel={featuredIssue.url.startsWith("http") ? "noreferrer noopener" : undefined}
-                    >
-                      {newsletter.homepagePitch.latestLabel}
-                    </a>
-                  </div>
-                </div>
-                <EditorialCard title={featuredIssue.title} className="hover:shadow-none">
-                  <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
-                    {featuredIssue.summary}
-                  </p>
-                </EditorialCard>
-              </div>
-            </article>
-          </div>
-        </section>
-      ) : null}
-
-      <section className="pb-8 md:pb-12">
-        <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <TagList
-            items={homeExplore.items.map((item) => ({ label: item.label, href: withBasePath(item.href) }))}
-            linkClassName="px-4 py-2.5 text-sm text-ink"
-          />
-        </div>
-      </section>
-
-      <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <FeaturePanel
-            kicker="Join The Journal"
-            title={newsletter.name}
-            footer={<p className="text-sm text-muted">{newsletter.formHint}</p>}
-          >
-            <SubscribeForm />
-          </FeaturePanel>
-          <div className="grid gap-3">
-            {newsletter.recentIssues.slice(0, 3).map((issue) => (
-              <EditorialCard key={issue.title} title={issue.title} href={issue.url} ctaLabel={newsletter.title}>
-                <p className="font-mono text-xs tracking-[0.12em] text-muted">{toDateLabel(issue.date)}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>
+        <Section title={newsletter.title} intro={newsletter.homepagePitch.description} kicker="03 / NEWSLETTER">
+          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <FeaturePanel
+              kicker="Join The Journal"
+              title={newsletter.name}
+              description={newsletter.homepagePitch.proof}
+              footer={<p className="text-sm text-muted">{newsletter.formHint}</p>}
+            >
+              <SubscribeForm />
+            </FeaturePanel>
+            <div className="grid gap-3">
+              <EditorialCard title={featuredIssue.title} href={featuredIssue.url} ctaLabel={newsletter.homepagePitch.latestLabel}>
+                <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
+                  {featuredIssue.summary}
+                </p>
               </EditorialCard>
-            ))}
+              {recentIssues.slice(1).map((issue) => (
+                <EditorialCard key={issue.title} title={issue.title} href={issue.url} ctaLabel={newsletter.title}>
+                  <p className="text-xs text-muted">{toDateLabel(issue.date)}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>
+                </EditorialCard>
+              ))}
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      ) : null}
 
       <Section title="声音与文字" intro={podcastsHosted.intro} kicker="04 / PODCAST & BOOK">
         <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
@@ -179,19 +150,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title={workIndex.title} intro={workIndex.intro} kicker="06 / ALL WORK">
-        <EditorialList
-          items={workIndex.items.map((item) => ({
-            title: item.name,
-            description: item.summary,
-            href: item.href,
-            ctaLabel: item.ctaLabel,
-          }))}
-        />
-      </Section>
-
-      <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
-        <div className="grid gap-6 lg:grid-cols-3">
+      <Section title={talk.title} intro={talk.intro} kicker="06 / TALK">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr_0.95fr]">
           <EditorialCard title={talk.positioning.title}>
             <p className="mt-3 text-sm leading-relaxed text-muted">{talk.positioning.description}</p>
           </EditorialCard>
@@ -218,6 +178,17 @@ export default function HomePage() {
             </a>
           </EditorialCard>
         </div>
+      </Section>
+
+      <Section title={workIndex.title} intro={workIndex.intro} kicker="07 / ALL WORK">
+        <EditorialList
+          items={workIndex.items.map((item) => ({
+            title: item.name,
+            description: item.summary,
+            href: item.href,
+            ctaLabel: item.ctaLabel,
+          }))}
+        />
       </Section>
 
       <Section title={socials.title} kicker="08 / ELSEWHERE">
