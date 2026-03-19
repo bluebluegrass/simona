@@ -234,8 +234,8 @@ export const siteData: SiteData = {
   },
 
   helpHub: {
-    title: "如果你第一次来",
-    intro: "先从这里认识我。一个入口给你内容，一个入口给你作品，一个入口给你对话。",
+    title: "如果你刚来到这里",
+    intro: "你可以先订阅我每天在写的 Newsletter，也可以去听播客，或者直接约我聊聊。",
     items: [
       {
         title: "每天一集播客推荐",
