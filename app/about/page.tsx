@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import EditorialCard from "@/components/EditorialCard";
 import Section from "@/components/Section";
 import { siteData } from "@/content/site";
-import { isInternalHref, withBasePath } from "@/lib/basePath";
+import { withBasePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "关于我 | 穿堂风Simona",
@@ -54,18 +55,7 @@ export default function AboutPage() {
       <Section title="What I'm Building" kicker="03 / WORK">
         <div className="grid gap-4 lg:grid-cols-2">
           {about.projects.map((project) => (
-            <article key={project.name} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
-              <h2 className="text-lg font-medium tracking-tight text-ink">{project.name}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{project.summary}</p>
-              <a
-                href={isInternalHref(project.href) ? withBasePath(project.href) : project.href}
-                className="mt-4 inline-block text-sm underline underline-offset-4"
-                target={project.href.startsWith("http") ? "_blank" : undefined}
-                rel={project.href.startsWith("http") ? "noreferrer noopener" : undefined}
-              >
-                {project.ctaLabel}
-              </a>
-            </article>
+            <EditorialCard key={project.name} title={project.name} description={project.summary} href={project.href} ctaLabel={project.ctaLabel} />
           ))}
         </div>
       </Section>

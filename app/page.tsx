@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Card from "@/components/Card";
+import EditorialCard from "@/components/EditorialCard";
+import EditorialList from "@/components/EditorialList";
 import Hero from "@/components/Hero";
 import LifeInMotion from "@/components/LifeInMotion/LifeInMotion";
 import Section from "@/components/Section";
@@ -32,21 +34,7 @@ export default function HomePage() {
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{helpHub.title}</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
-            <div className="mt-8 divide-y divide-border border-y border-border">
-              {helpHub.items.map((item) => (
-                <a
-                  key={item.title}
-                  href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                  className="group grid gap-2 py-5 no-underline transition-colors hover:no-underline lg:grid-cols-[1.05fr_1.45fr_auto] lg:items-center lg:gap-6"
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
-                >
-                  <h3 className="text-base font-medium tracking-tight text-ink transition-colors group-hover:text-accent">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted">{item.description}</p>
-                  <span className="pt-1 text-sm text-ink underline underline-offset-4 lg:pt-0">{item.ctaLabel}</span>
-                </a>
-              ))}
-            </div>
+            <EditorialList items={helpHub.items} className="mt-8" />
           </article>
         </div>
       </section>
@@ -77,13 +65,12 @@ export default function HomePage() {
                     </a>
                   </div>
                 </div>
-                <article className="rounded-2xl border border-border bg-card p-5">
+                <EditorialCard title={featuredIssue.title} className="hover:shadow-none">
                   <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
-                  <h3 className="mt-2 text-base font-medium text-ink">{featuredIssue.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
                     {featuredIssue.summary}
                   </p>
-                </article>
+                </EditorialCard>
               </div>
             </article>
           </div>
@@ -165,10 +152,11 @@ export default function HomePage() {
             ))}
           </div>
           {featuredBook ? (
-            <article className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
-              <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Book highlight</p>
-              <h3 className="mt-3 text-xl font-medium tracking-tight text-ink">《我为什么（不）想成为妈妈》</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">根据《噢妈妈》的部分采访整理成文稿</p>
+            <EditorialCard
+              kicker="Book highlight"
+              title="《我为什么（不）想成为妈妈》"
+              description="根据《噢妈妈》的部分采访整理成文稿"
+            >
               <div className="mt-4 flex flex-wrap gap-2">
                 <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">2025-02</span>
                 <span className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted">168,311字</span>
@@ -182,7 +170,7 @@ export default function HomePage() {
               >
                 去微信读书阅读
               </a>
-            </article>
+            </EditorialCard>
           ) : null}
         </div>
       </Section>
@@ -204,22 +192,14 @@ export default function HomePage() {
       </Section>
 
       <Section title={workIndex.title} intro={workIndex.intro} kicker="06 / ALL WORK">
-        <div className="divide-y divide-border border-y border-border">
-          {workIndex.items.map((item) => (
-            <article key={item.name} className="grid gap-2 py-5 lg:grid-cols-[1fr_1.6fr_auto] lg:items-center lg:gap-6">
-              <h3 className="text-base font-medium tracking-tight text-ink">{item.name}</h3>
-              <p className="text-sm leading-relaxed text-muted">{item.summary}</p>
-              <a
-                href={isInternalHref(item.href) ? withBasePath(item.href) : item.href}
-                className="pt-1 text-sm underline underline-offset-4 lg:pt-0"
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noreferrer noopener" : undefined}
-              >
-                {item.ctaLabel}
-              </a>
-            </article>
-          ))}
-        </div>
+        <EditorialList
+          items={workIndex.items.map((item) => ({
+            title: item.name,
+            description: item.summary,
+            href: item.href,
+            ctaLabel: item.ctaLabel,
+          }))}
+        />
       </Section>
 
       <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
