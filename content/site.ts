@@ -214,8 +214,8 @@ export const siteData: SiteData = {
   },
 
   helpHub: {
-    title: "先从这里开始",
-    intro: "如果你第一次来，这三件事最能代表我现在在做的内容，也最容易帮你快速找到入口。",
+    title: "如果你第一次来",
+    intro: "先从这里认识我。一个入口给你内容，一个入口给你作品，一个入口给你对话。",
     items: [
       {
         title: "每天一集播客推荐",
@@ -242,8 +242,8 @@ export const siteData: SiteData = {
   },
 
   homeExplore: {
-    title: "你也可以按主题开始",
-    intro: "不确定先看什么？选一个你当下最关心的入口。",
+    title: "也可以从你关心的主题开始",
+    intro: "如果你不是来按顺序认识我的，就直接从你现在最在意的问题进去。",
     items: [
       { label: "播客推荐", href: "/newsletter" },
       { label: "女性叙事", href: "/podcasts" },
