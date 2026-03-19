@@ -27,7 +27,10 @@ type SiteData = {
   hero: {
     titleLines: string[];
     subtitle: string;
+    intro: string;
     proofBadges: [string, string, string];
+    currentTitle: string;
+    currentItems: string[];
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
   };
@@ -221,7 +224,15 @@ export const siteData: SiteData = {
       "我是穿堂风 Simona。",
     ],
     subtitle: "前 Meta 数据工程师。2022 年被裁员后开启数字游民生活，现在常住阿姆斯特丹。",
+    intro: "我用 Newsletter、播客、写作和一对一对话，把这些年关于迁移、女性叙事、工作与重建的经验慢慢讲出来。",
     proofBadges: ["1780期每日推荐", "150篇长文", "持续7年"],
+    currentTitle: "现在的我",
+    currentItems: [
+      "常住阿姆斯特丹",
+      "在写 The Pod Luck Club",
+      "继续做《噢妈妈》与 sàgó散讲",
+      "和正在迁移或转折的人聊天",
+    ],
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
   },
