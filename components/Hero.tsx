@@ -39,14 +39,7 @@ export default function Hero() {
             <div className="p-5 md:p-6">
               <p className="editorial-kicker">Right Now</p>
               <h2 className="mt-3 text-xl font-medium tracking-tight text-ink">{hero.currentTitle}</h2>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
-                {hero.currentItems.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span aria-hidden="true" className="mt-[0.55rem] h-1.5 w-1.5 rounded-full bg-podluck" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-4 text-sm leading-relaxed text-muted">{hero.currentNote}</p>
             </div>
           </div>
         </div>

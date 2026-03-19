@@ -30,7 +30,7 @@ type SiteData = {
     intro: string;
     proofBadges: [string, string, string];
     currentTitle: string;
-    currentItems: string[];
+    currentNote: string;
     primaryCta: { label: string; href: string };
     secondaryCta: { label: string; href: string };
   };
@@ -227,12 +227,8 @@ export const siteData: SiteData = {
     intro: "我用 Newsletter、播客、写作和一对一对话，把这些年关于迁移、女性叙事、工作与重建的经验慢慢讲出来。",
     proofBadges: ["1780期每日推荐", "150篇长文", "持续7年"],
     currentTitle: "现在的我",
-    currentItems: [
-      "常住阿姆斯特丹",
-      "在写 The Pod Luck Club",
-      "继续做《噢妈妈》与 sàgó散讲",
-      "和正在迁移或转折的人聊天",
-    ],
+    currentNote:
+      "现在我常住阿姆斯特丹，继续写 The Pod Luck Club，也继续做《噢妈妈》和 sàgó散讲。平时我会和一些正在迁移、转折或重建的人聊天，看看彼此最近都走到了哪里。",
     primaryCta: { label: "订阅 Newsletter", href: "/newsletter" },
     secondaryCta: { label: "预约聊天", href: "/talk" },
   },
