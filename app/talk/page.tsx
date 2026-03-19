@@ -1,3 +1,5 @@
+import EditorialCard from "@/components/EditorialCard";
+import FeaturePanel from "@/components/FeaturePanel";
 import type { Metadata } from "next";
 import Section from "@/components/Section";
 import { siteData } from "@/content/site";
@@ -12,65 +14,59 @@ export default function TalkPage() {
 
   return (
     <Section title={talk.title} intro={talk.intro}>
-      <article className="mb-6 rounded-2xl border border-border bg-card p-5 md:mb-8 md:p-6">
-        <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Conversation</p>
-        <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{talk.positioning.title}</h2>
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{talk.positioning.description}</p>
-      </article>
+      <FeaturePanel
+        kicker="Conversation"
+        title={talk.positioning.title}
+        description={talk.positioning.description}
+        className="mb-6 bg-card md:mb-8"
+      />
 
-      <article className="mb-6 rounded-2xl border border-border bg-surface p-5 md:mb-8 md:p-6">
-        <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Trust</p>
-        <h2 className="mt-3 text-xl font-medium tracking-tight text-ink md:text-2xl">{trustStrip.title}</h2>
-        <ul className="mt-4 grid gap-3 md:grid-cols-2">
+      <FeaturePanel kicker="Trust" title={trustStrip.title} className="mb-6 md:mb-8">
+        <ul className="grid gap-3 md:grid-cols-2">
           {trustStrip.items.map((item) => (
             <li key={item} className="rounded-xl border border-border bg-card px-4 py-3 text-sm leading-relaxed text-muted">
               {item}
             </li>
           ))}
         </ul>
-      </article>
+      </FeaturePanel>
 
       <div className="mb-6 grid gap-5 md:mb-8 lg:grid-cols-2">
-        <article className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-base font-medium tracking-tight text-ink">聊完你会带走什么</h3>
+        <EditorialCard title="聊完你会带走什么">
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.outcomes.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </article>
+        </EditorialCard>
 
-        <article className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-base font-medium tracking-tight text-ink">这次对话怎么进行</h3>
+        <EditorialCard title="这次对话怎么进行">
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.process.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </article>
+        </EditorialCard>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">
-        <article className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-base font-medium tracking-tight">这次聊天适合你，如果…</h3>
+        <EditorialCard title="这次聊天适合你，如果…">
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.goodFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </article>
+        </EditorialCard>
 
-        <article className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-base font-medium tracking-tight">这次聊天不太适合，如果…</h3>
+        <EditorialCard title="这次聊天不太适合，如果…">
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.notFor.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </article>
+        </EditorialCard>
 
-        <article className="rounded-2xl border border-border bg-card p-5">
-          <h3 className="text-base font-medium tracking-tight">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
+        <EditorialCard title={siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
             {talk.logistics.map((item) => (
               <li key={item}>{item}</li>
@@ -84,7 +80,7 @@ export default function TalkPage() {
           >
             {talk.cta.label}
           </a>
-        </article>
+        </EditorialCard>
       </div>
     </Section>
   );

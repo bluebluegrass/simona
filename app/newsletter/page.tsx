@@ -1,3 +1,5 @@
+import EditorialCard from "@/components/EditorialCard";
+import FeaturePanel from "@/components/FeaturePanel";
 import type { Metadata } from "next";
 import GhostSignupEmbed from "@/components/GhostSignupEmbed";
 import Section from "@/components/Section";
@@ -21,31 +23,27 @@ export default function NewsletterPage() {
   return (
     <Section title={newsletter.title} intro={newsletter.valueProp}>
       <div className="grid gap-8 md:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-5 rounded-2xl border border-border bg-podluck-soft p-6 shadow-sm">
-          <h2 className="text-xl font-medium tracking-tight">{newsletter.name}</h2>
-          <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
-            <GhostSignupEmbed />
+        <FeaturePanel
+          kicker="Join The Journal"
+          title={newsletter.name}
+          className="bg-podluck-soft shadow-sm"
+          footer={<p className="text-sm text-muted">{newsletter.formHint}</p>}
+        >
+          <div className="space-y-5">
+            <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+              <GhostSignupEmbed />
+            </div>
+            <p className="text-center text-xs tracking-[0.08em] text-muted">或跳转订阅页</p>
+            <SubscribeForm />
           </div>
-          <p className="text-center text-xs tracking-[0.08em] text-muted">或跳转订阅页</p>
-          <SubscribeForm />
-          <p className="text-sm text-muted">{newsletter.formHint}</p>
-        </div>
+        </FeaturePanel>
 
         <div className="grid gap-3">
           {newsletter.recentIssues.map((issue) => (
-            <article key={issue.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+            <EditorialCard key={issue.title} title={issue.title} href={issue.url} ctaLabel={newsletter.title}>
               <p className="text-xs text-muted">{toDateLabel(issue.date)}</p>
-              <h3 className="mt-2 text-base font-medium">{issue.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>
-              <a
-                href={isInternalHref(issue.url) ? withBasePath(issue.url) : issue.url}
-                className="mt-3 inline-block text-sm underline underline-offset-4"
-                target={issue.url.startsWith("http") ? "_blank" : undefined}
-                rel={issue.url.startsWith("http") ? "noreferrer noopener" : undefined}
-              >
-                {newsletter.title}
-              </a>
-            </article>
+            </EditorialCard>
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Card from "@/components/Card";
 import EditorialCard from "@/components/EditorialCard";
 import EditorialList from "@/components/EditorialList";
+import FeaturePanel from "@/components/FeaturePanel";
 import Hero from "@/components/Hero";
 import LifeInMotion from "@/components/LifeInMotion/LifeInMotion";
 import Section from "@/components/Section";
@@ -95,27 +96,19 @@ export default function HomePage() {
 
       <Section title={newsletter.title} intro={newsletter.valueProp} kicker="03 / NEWSLETTER">
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-4 rounded-2xl border border-border bg-surface p-5">
-            <p className="font-mono text-xs uppercase tracking-[0.12em] text-muted">Join The Journal</p>
-            <h3 className="text-xl font-medium tracking-tight">{newsletter.name}</h3>
+          <FeaturePanel
+            kicker="Join The Journal"
+            title={newsletter.name}
+            footer={<p className="text-sm text-muted">{newsletter.formHint}</p>}
+          >
             <SubscribeForm />
-            <p className="text-sm text-muted">{newsletter.formHint}</p>
-          </div>
+          </FeaturePanel>
           <div className="grid gap-3">
             {newsletter.recentIssues.slice(0, 3).map((issue) => (
-              <article key={issue.title} className="rounded-2xl border border-border bg-card p-5 transition-shadow hover:shadow-sm">
+              <EditorialCard key={issue.title} title={issue.title} href={issue.url} ctaLabel={newsletter.title}>
                 <p className="font-mono text-xs tracking-[0.12em] text-muted">{toDateLabel(issue.date)}</p>
-                <h4 className="mt-2 text-base font-medium">{issue.title}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{issue.summary}</p>
-                <a
-                  href={isInternalHref(issue.url) ? withBasePath(issue.url) : issue.url}
-                  className="mt-3 inline-block text-sm underline underline-offset-4"
-                  target={issue.url.startsWith("http") ? "_blank" : undefined}
-                  rel={issue.url.startsWith("http") ? "noreferrer noopener" : undefined}
-                >
-                  {newsletter.title}
-                </a>
-              </article>
+              </EditorialCard>
             ))}
           </div>
         </div>
@@ -204,20 +197,17 @@ export default function HomePage() {
 
       <Section title={talk.title} intro={talk.intro} kicker="07 / TALK">
         <div className="grid gap-6 lg:grid-cols-3">
-          <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium tracking-tight">{talk.positioning.title}</h3>
+          <EditorialCard title={talk.positioning.title}>
             <p className="mt-3 text-sm leading-relaxed text-muted">{talk.positioning.description}</p>
-          </article>
-          <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium tracking-tight">聊完你会带走什么</h3>
+          </EditorialCard>
+          <EditorialCard title="聊完你会带走什么">
             <ul className="mt-3 space-y-2 text-sm text-muted">
               {talk.outcomes.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-          </article>
-          <article className="rounded-2xl border border-border bg-card p-5">
-            <h3 className="text-base font-medium tracking-tight">{siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}</h3>
+          </EditorialCard>
+          <EditorialCard title={siteData.header.nav.find((item) => item.href === "/talk")?.label ?? talk.title}>
             <ul className="mt-3 space-y-2 text-sm text-muted">
               {talk.process.map((item) => (
                 <li key={item}>{item}</li>
@@ -231,7 +221,7 @@ export default function HomePage() {
             >
               {talk.cta.label}
             </a>
-          </article>
+          </EditorialCard>
         </div>
       </Section>
 
