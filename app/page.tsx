@@ -32,14 +32,21 @@ export default function HomePage() {
       <Hero />
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm">
-            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Start Here</p>
+          <article className="editorial-panel bg-card px-6 py-7 md:px-8 md:py-8">
+            <div
+              aria-hidden="true"
+              className="absolute right-6 top-6 h-10 w-10 rounded-full border border-accent/30 bg-accent-soft"
+            />
+            <p className="editorial-kicker relative z-10">Start Here</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{helpHub.title}</h2>
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{helpHub.intro}</p>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
               {helpHub.items.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-border bg-accent-soft p-5 transition-shadow hover:shadow-sm">
+                <article
+                  key={item.title}
+                  className="rounded-[1.5rem] border border-border bg-accent-soft p-5 transition-[transform,box-shadow,background-color] hover:-translate-y-1 hover:shadow-md"
+                >
                   <h3 className="text-base font-medium tracking-tight text-ink">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
                   <a
@@ -62,10 +69,10 @@ export default function HomePage() {
       {featuredIssue ? (
         <section className="pb-8 md:pb-12">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
-            <article className="rounded-3xl border border-border bg-podluck-soft p-6 md:p-8 shadow-sm">
+            <article className="editorial-panel bg-podluck-soft px-6 py-7 md:px-8 md:py-8">
               <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Newsletter</p>
+                  <p className="editorial-kicker">Newsletter</p>
                   <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{newsletter.homepagePitch.title}</h2>
                   <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted md:text-base">{newsletter.homepagePitch.description}</p>
                   <p className="mt-4 text-sm text-ink">{newsletter.homepagePitch.proof}</p>
@@ -83,7 +90,7 @@ export default function HomePage() {
                     </a>
                   </div>
                 </div>
-                <article className="rounded-2xl border border-border bg-card p-5">
+                <article className="rounded-[1.5rem] border border-border bg-card p-5 shadow-sm">
                   <p className="text-xs text-muted">{toDateLabel(featuredIssue.date)}</p>
                   <h3 className="mt-2 text-base font-medium text-ink">{featuredIssue.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3] overflow-hidden">
@@ -98,8 +105,8 @@ export default function HomePage() {
 
       <section className="pb-8 md:pb-12">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <article className="rounded-3xl border border-border bg-card p-6 md:p-8 shadow-sm">
-            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted">By Topic</p>
+          <article className="editorial-panel bg-card px-6 py-7 md:px-8 md:py-8">
+            <p className="editorial-kicker">By Topic</p>
             <h2 className="mt-3 text-2xl font-medium tracking-tight text-ink md:text-3xl">{homeExplore.title}</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">{homeExplore.intro}</p>
             <div className="mt-5 flex flex-wrap gap-2.5">
